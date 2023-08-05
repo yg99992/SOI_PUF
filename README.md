@@ -1,2 +1,2 @@
-# TP_PUF
-The CRPs of TP PUFs used for modeling attack
+# SOI PUF
+This is the python model of SOI PUF and cSOI PUF.
