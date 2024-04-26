@@ -1,0 +1,64 @@
+
+%**************************************************************************
+% Generate all placement constraints for switch chain in puf.
+%**************************************************************************
+
+clear;
+clc;
+
+
+
+%**************************************************************************
+% Constraint file name
+%**************************************************************************
+
+filename = [ './PUF_Chaotic/placement/SOIPUF_2x64_4x64.xdc' ];
+fid=fopen(filename,'w');
+if(fid==-1)
+   disp('File cannot be created.'); 
+end
+
+
+%*************************************************************
+% gen XDC
+%*************************************************************
+
+%% PUF0 
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(32, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(32, 40, fid, top_name, 64);
+
+SOIPUF_tero_placement(28, 3, fid, [top_name, 'SOIPUF64x2_core/'], 32);
+SOIPUF_tero_placement(30, 3, fid, [top_name, 'SOIPUF64x4_core/'], 32);
+
+%% PUF1
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_1/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(38, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(38, 40, fid, top_name, 64);
+%SOIPUF_64x4_placement(38, 2, fid, top_name, 64);
+
+%% PUF2
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_2/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(40, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(42, 2, fid, top_name, 64);
+%SOIPUF_64x2_placement(40, 2, fid, top_name, 64);
+%SOIPUF_64x4_placement(42, 2, fid, top_name, 64);
+
+%% PUF3
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_3/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(44, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(50, 2, fid, top_name, 64);
+
+%% PUF4
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_4/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(54, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(58, 2, fid, top_name, 64);
+
+%% PUF5
+top_name = 'design_1_i/chaotic_puf_4lines_64stages_5/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/';
+SOIPUF_64x2_placement_sym(80, 2, fid, top_name, 64);
+SOIPUF_64x4_placement_sym(84, 2, fid, top_name, 64);
+
+
+
+fclose(fid);

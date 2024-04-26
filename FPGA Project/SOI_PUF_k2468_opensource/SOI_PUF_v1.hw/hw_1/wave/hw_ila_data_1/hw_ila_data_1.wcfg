@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/FPGA_project/SOI_PUF/SOI_PUF_v1/SOI_PUF_v1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="96511fs"></ZoomStartTime>
+      <ZoomEndTime time="246890fs"></ZoomEndTime>
+      <Cursor1Time time="148000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="437"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/resp_reg" type="array">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/resp_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">resp_reg[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/sta_current" type="array">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/sta_current[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sta_current[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/clk" type="logic">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/finish" type="logic">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/tigReg" type="logic">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/tigReg</obj_property>
+      <obj_property name="ObjectShortName">tigReg</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/tig_pulse" type="logic">
+      <obj_property name="ElementShortName">design_1_i/chaotic_puf_4lines_64stages_0/inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/tig_pulse</obj_property>
+      <obj_property name="ObjectShortName">tig_pulse</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,122 @@
+/*
+ * puf_def.c
+ *
+ *  Created on: 2019ï¿½ï¿½10ï¿½ï¿½10ï¿½ï¿½
+ *      Author: Chongchong Xu
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xil_types.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "sleep.h"
+#include "xuartps_hw.h"
+#include "xsdps.h"		/* SD device driver */
+#include "xil_printf.h"
+#include "ff.h"
+#include "xil_cache.h"
+#include "xstatus.h"
+#include "xgpiops.h"
+#include "puf_def.h"
+#include "keccak-tiny.h"
+#include "sd_fun.h"
+#include "soi_puf.h"
+
+
+//#define TRNG_V1
+//#define TRNG_V2_W2
+//#define TRNG_V2_W3
+#define TRNG_V2_W4
+
+static FIL fil;		/* File object */
+static FATFS fatfs;
+FRESULT f_res;
+UINT NumBytesWritten;
+
+static char *SD_File;
+
+u8 FILTER_CNT = 0; // Mean filter Repeat 2^FILTER_CNT times
+
+puf_chaotic* puf_line4[6];
+puf_chaotic* puf_line8[6];
+int gen_trng(puf_chaotic* puf_hw, u32 dat_num, char* file_name);
+int gen_trng_xor(puf_chaotic* puf_hw, u32 dat_num, char* file_name, u8 cnt_th);
+int gen_trng_xor_add_test(puf_chaotic* puf_hw, u32 dat_num, char* file_name, u8 cnt_th);
+static inline void chaotic_read_once_trng_8(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_xor, u32* meta_val, u8* meta_cnt);
+
+int double_metastable_eval(puf_chaotic* puf_hw, u32 dat_num, char* file_name);
+int double_metastable_count_store(puf_chaotic* puf_hw, u32 dat_num, u8 puf_primitive, char* file_name);
+int double_metastable_filtered_count_store(puf_chaotic* puf_hw, u32 dat_num, u8 puf_primitive);
+void trng_throughput_eval(puf_chaotic* puf_hw, u32 dat_num);
+static inline u8 chaotic_read_once_trng_selected(puf_chaotic* puf_hw, u16* chal_dat, u8 puf_primitive);
+static inline u8 chaotic_read_counter_resp_selected(puf_chaotic* puf_hw, u32* resp_dat, u8 puf_primitive);
+int meta_chal_gen(puf_chaotic* puf_hw, u16* chal_dat, u8 cnt_th);
+int gen_trng_xor_throughput(puf_chaotic* puf_hw, u32 dat_num);
+
+int chaotic_test()
+{
+	u16* chal_dat;
+	u16* chal_dat_stable[4];
+	u8 i,j;
+	u32 crp_num = 1000;
+	u16 rpt_cnt  = 2;
+	char file_name[50] = "A4PxUx.dat";
+
+	puf_line4[0] = (puf_chaotic*)PUF40_BASE_ADDR;
+	puf_line4[1] = (puf_chaotic*)PUF41_BASE_ADDR;
+	puf_line4[2] = (puf_chaotic*)PUF42_BASE_ADDR;
+	puf_line4[3] = (puf_chaotic*)PUF43_BASE_ADDR;
+	puf_line4[4] = (puf_chaotic*)PUF44_BASE_ADDR;
+	puf_line4[5] = (puf_chaotic*)PUF45_BASE_ADDR;
+
+	puf_line8[0] = (puf_chaotic*)PUF80_BASE_ADDR;
+	puf_line8[1] = (puf_chaotic*)PUF81_BASE_ADDR;
+	puf_line8[2] = (puf_chaotic*)PUF82_BASE_ADDR;
+	puf_line8[3] = (puf_chaotic*)PUF83_BASE_ADDR;
+	puf_line8[4] = (puf_chaotic*)PUF84_BASE_ADDR;
+	puf_line8[5] = (puf_chaotic*)PUF85_BASE_ADDR;
+
+    if(sd_init() != 0)
+    	return -1;
+
+    soi_test();
+    //puf_line8[0]->reg3 = CLK12d5M;
+    //puf_line8[0]->reg3 = CLK5M;
+
+    //double_metastable_eval(puf_line8[0], 1000000, "META.dat");
+    //gen_trng_xor(puf_line8[0], 100000000, "TRGN4.dat", 4);
+
+    //gen_trng_xor_add_test(puf_line8[0], 100000000, "TC3.dat", 8);
+
+    //double_metastable_count_store(puf_line8[0], 100000, 0, "10MP0.dat");
+    //trng_throughput_eval(puf_line8[0], 100000000);
+    //double_metastable_filtered_count_store(puf_line8[0], 10000000, 7);
+
+	return 0;
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////
+//  Randomly generate challenges
+///////////////////////////////////////////////////////////
+u16* chal_gen(u32 num)
+{
+	u16 * chal_dat;
+	u32 loop, cnt_16;
+
+	cnt_16 = num * 4;
+	chal_dat = (u16 *)malloc(cnt_16 * sizeof(u16));
+	if(chal_dat == NULL)
+		return chal_dat;
+	srand(100);
+	for(loop = 0; loop < cnt_16; loop++){
+		*(chal_dat + loop) = rand();
+	}
+	return chal_dat;
+}
+
+

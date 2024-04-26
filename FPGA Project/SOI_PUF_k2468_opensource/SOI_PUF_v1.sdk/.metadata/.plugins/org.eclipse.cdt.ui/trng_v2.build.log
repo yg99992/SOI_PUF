@@ -1,0 +1,226 @@
+10:16:05 **** Build of configuration Debug for project trng_v2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/puf_def.h:81:23: warning: 'puf_multi_read_res' declared 'static' but never defined [-Wunused-function]
+ static inline int16_t puf_multi_read_res(puf_extract* puf_hw, u8 chip_id, u8 flip_bit, u8 read_bit);
+                       ^~~~~~~~~~~~~~~~~~
+../src/puf_def.h:87:19: warning: 'LFSR' declared 'static' but never defined [-Wunused-function]
+ static inline int LFSR(unsigned long long chal, unsigned int bit_cnt, unsigned char* dat, unsigned char mode);
+                   ^~~~
+../src/puf_def.h:105:20: warning: 'chaotic_read_once' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:106:20: warning: 'chaotic_read_once_tmv' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_tmv(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_xor_val, u8 tmv_num);
+                    ^~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:107:20: warning: 'chaotic_read_calibration' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_calibration(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:111:18: warning: 'chaotic_crp_check' declared 'static' but never defined [-Wunused-function]
+ static inline u8 chaotic_crp_check(puf_chaotic* puf_hw, u16* chal_dat, u8 rpt_thr, u8 rm_bits);
+                  ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:113:20: warning: 'chaotic_read_once_flip_lsb' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_flip_lsb(puf_chaotic* puf_hw, u16* chal_dat, u8 flip_inx, u32* resp_xor_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/keccak-tiny.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/keccak-tiny.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/keccak-tiny.d" -MT"src/keccak-tiny.o" -o "src/keccak-tiny.o" "../src/keccak-tiny.c"
+'Finished building: ../src/keccak-tiny.c'
+' '
+'Building file: ../src/led.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led.d" -MT"src/led.o" -o "src/led.o" "../src/led.c"
+'Finished building: ../src/led.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/puf_def.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/puf_def.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/puf_def.d" -MT"src/puf_def.o" -o "src/puf_def.o" "../src/puf_def.c"
+../src/puf_def.c: In function 'chaotic_test':
+../src/puf_def.c:63:7: warning: unused variable 'file_name' [-Wunused-variable]
+  char file_name[50] = "A4PxUx.dat";
+       ^~~~~~~~~
+../src/puf_def.c:62:6: warning: unused variable 'rpt_cnt' [-Wunused-variable]
+  u16 rpt_cnt  = 2;
+      ^~~~~~~
+../src/puf_def.c:61:6: warning: unused variable 'crp_num' [-Wunused-variable]
+  u32 crp_num = 1000;
+      ^~~~~~~
+../src/puf_def.c:60:7: warning: unused variable 'j' [-Wunused-variable]
+  u8 i,j;
+       ^
+../src/puf_def.c:60:5: warning: unused variable 'i' [-Wunused-variable]
+  u8 i,j;
+     ^
+../src/puf_def.c:59:7: warning: unused variable 'chal_dat_stable' [-Wunused-variable]
+  u16* chal_dat_stable[4];
+       ^~~~~~~~~~~~~~~
+../src/puf_def.c:58:7: warning: unused variable 'chal_dat' [-Wunused-variable]
+  u16* chal_dat;
+       ^~~~~~~~
+../src/puf_def.c: In function 'gen_trng':
+../src/puf_def.c:170:5: warning: variable 'trng_dat' set but not used [-Wunused-but-set-variable]
+  u8 trng_dat[100];
+     ^~~~~~~~
+../src/puf_def.c: In function 'gen_trng_xor':
+../src/puf_def.c:222:6: warning: unused variable 'loop' [-Wunused-variable]
+  u32 loop;
+      ^~~~
+../src/puf_def.c: In function 'gen_trng_xor_add_test':
+../src/puf_def.c:377:5: warning: unused variable 'meta_max' [-Wunused-variable]
+  u8 meta_max = 0;
+     ^~~~~~~~
+../src/puf_def.c: In function 'chaotic_read_once_flip_chal':
+../src/puf_def.c:739:5: warning: unused variable 'i' [-Wunused-variable]
+  u8 i = 0;
+     ^
+../src/puf_def.c: In function 'chaotic_read_once_trng_8':
+../src/puf_def.c:853:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  while(puf_hw->reg4 != 1);    // wait finish signal
+  ^~~~~
+../src/puf_def.c:881:3: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'while'
+   *meta_val   = (puf_hw->reg1 & 0x000F0000) >> 16;
+   ^
+../src/puf_def.c: In function 'chal_SAC_test':
+../src/puf_def.c:986:12: warning: unused variable 'i' [-Wunused-variable]
+  static u8 i = 0;
+            ^
+../src/puf_def.c:981:6: warning: unused variable 'chal_dat_tmp' [-Wunused-variable]
+  u16 chal_dat_tmp;
+      ^~~~~~~~~~~~
+../src/puf_def.c: In function 'puf_multi_test':
+../src/puf_def.c:1047:10: warning: unused variable 'file_name2' [-Wunused-variable]
+     char file_name2[20] = "A6UxP2.dat";
+          ^~~~~~~~~~
+../src/puf_def.c:1046:10: warning: unused variable 'file_name1' [-Wunused-variable]
+     char file_name1[20] = "A6UxP1.dat";
+          ^~~~~~~~~~
+../src/puf_def.c:1045:27: warning: unused variable 'inx' [-Wunused-variable]
+     u8 chip_id = 0, data, inx = 0;
+                           ^~~
+../src/puf_def.c:1045:21: warning: unused variable 'data' [-Wunused-variable]
+     u8 chip_id = 0, data, inx = 0;
+                     ^~~~
+../src/puf_def.c:1045:8: warning: unused variable 'chip_id' [-Wunused-variable]
+     u8 chip_id = 0, data, inx = 0;
+        ^~~~~~~
+../src/puf_def.c: In function 'multi_read_random_sd_attack':
+../src/puf_def.c:1142:35: warning: unused variable 'mux_name' [-Wunused-variable]
+  u8 SourceAddress[GROP_RES*2048], mux_name[8], chip_id;
+                                   ^~~~~~~~
+../src/puf_def.c: In function 'puf_random_read':
+../src/puf_def.c:1507:14: warning: unused variable 'res2' [-Wunused-variable]
+     s16 res, res2;
+              ^~~~
+../src/puf_def.c: In function 'puf_multi_read':
+../src/puf_def.c:1724:29: warning: unused variable 'data' [-Wunused-variable]
+     uint32_t puf_multi_con, data;
+                             ^~~~
+../src/puf_def.c: In function 'puf_one_path':
+../src/puf_def.c:1786:35: warning: unused variable 'res' [-Wunused-variable]
+     uint32_t puf_multi_con, data, res, tdc[4];
+                                   ^~~
+In file included from ../src/puf_def.c:21:0:
+../src/puf_def.c: At top level:
+../src/puf_def.h:111:18: warning: 'chaotic_crp_check' declared 'static' but never defined [-Wunused-function]
+ static inline u8 chaotic_crp_check(puf_chaotic* puf_hw, u16* chal_dat, u8 rpt_thr, u8 rm_bits);
+                  ^~~~~~~~~~~~~~~~~
+../src/puf_def.c:986:12: warning: 'i' defined but not used [-Wunused-variable]
+  static u8 i = 0;
+            ^
+../src/puf_def.c: In function 'puf_read_single':
+../src/puf_def.c:1673:35: warning: 'puf_multi_con' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     puf_hw->con0  = puf_multi_con | 0x1;
+                     ~~~~~~~~~~~~~~^~~~~
+'Finished building: ../src/puf_def.c'
+' '
+'Building file: ../src/sd_fun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sd_fun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../trng_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd_fun.d" -MT"src/sd_fun.o" -o "src/sd_fun.o" "../src/sd_fun.c"
+../src/sd_fun.c: In function 'array_store_binfile_char':
+../src/sd_fun.c:300:15: warning: unused variable 'str_size' [-Wunused-variable]
+  unsigned int str_size;
+               ^~~~~~~~
+'Finished building: ../src/sd_fun.c'
+' '
+'Building target: trng_v2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../trng_v2_bsp/ps7_cortexa9_0/lib -o "trng_v2.elf"  ./src/helloworld.o ./src/keccak-tiny.o ./src/led.o ./src/platform.o ./src/puf_def.o ./src/sd_fun.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/puf_def.o: In function `multi_read_random_sd':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1091: undefined reference to `f_mount'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1092: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1093: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1102: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1125: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1128: undefined reference to `f_close'
+./src/puf_def.o: In function `multi_read_random_sd_attack':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1154: undefined reference to `f_mount'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1155: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1156: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1209: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1218: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1221: undefined reference to `f_close'
+./src/puf_def.o: In function `multi_read_random_sd_chal':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1244: undefined reference to `f_mount'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1245: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1246: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1255: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1302: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1311: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1314: undefined reference to `f_close'
+./src/puf_def.o: In function `puf_random_read':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1511: undefined reference to `f_mount'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1527: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1528: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1583: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/puf_def.c:1584: undefined reference to `f_close'
+./src/sd_fun.o: In function `array_store_file':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:140: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:144: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:148: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:152: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:155: undefined reference to `f_close'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:166: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:169: undefined reference to `f_close'
+./src/sd_fun.o: In function `array_store_file_short':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:195: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:198: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:201: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:205: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:208: undefined reference to `f_close'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:223: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:226: undefined reference to `f_close'
+./src/sd_fun.o: In function `array_store_file_char':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:252: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:255: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:258: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:262: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:265: undefined reference to `f_close'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:276: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:279: undefined reference to `f_close'
+./src/sd_fun.o: In function `array_store_binfile_char':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:303: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:306: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:309: undefined reference to `f_lseek'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:313: undefined reference to `f_open'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:316: undefined reference to `f_close'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:320: undefined reference to `f_write'
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:323: undefined reference to `f_close'
+./src/sd_fun.o: In function `sd_init':
+D:\FPGA_project\SOI_PUF\SOI_PUF_v1\SOI_PUF_v1.sdk\trng_v2\Debug/../src/sd_fun.c:332: undefined reference to `f_mount'
+collect2.exe: error: ld returned 1 exit status
+make: *** [trng_v2.elf] ´íÎó 1
+
+10:16:11 Build Finished (took 5s.257ms)
+

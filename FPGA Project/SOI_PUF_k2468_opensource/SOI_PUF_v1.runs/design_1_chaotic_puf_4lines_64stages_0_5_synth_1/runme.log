@@ -1,0 +1,1138 @@
+
+*** Running vivado
+    with args -log design_1_chaotic_puf_4lines_64stages_0_5.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_chaotic_puf_4lines_64stages_0_5.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_chaotic_puf_4lines_64stages_0_5.tcl -notrace
+Command: synth_design -top design_1_chaotic_puf_4lines_64stages_0_5 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6772 
+WARNING: [Synth 8-2507] parameter declaration becomes local in chaotic_puf_rngcnt_clkdiv with formal parameter declaration list [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:42]
+WARNING: [Synth 8-2507] parameter declaration becomes local in chaotic_puf_rngcnt_clkdiv with formal parameter declaration list [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:43]
+WARNING: [Synth 8-2507] parameter declaration becomes local in chaotic_puf_rngcnt_clkdiv with formal parameter declaration list [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:44]
+WARNING: [Synth 8-2507] parameter declaration becomes local in chaotic_puf_rngcnt_clkdiv with formal parameter declaration list [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:45]
+WARNING: [Synth 8-2507] parameter declaration becomes local in chaotic_puf_rngcnt_clkdiv with formal parameter declaration list [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:46]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 391.789 ; gain = 112.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_chaotic_puf_4lines_64stages_0_5' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/synth/design_1_chaotic_puf_4lines_64stages_0_5.v:56]
+INFO: [Synth 8-638] synthesizing module 'chaotic_puf_4lines_64stages_v1_0' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'chaotic_puf_4lines_64stages_v1_0_S00_AXI' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:247]
+INFO: [Synth 8-226] default block is never used [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:420]
+INFO: [Synth 8-638] synthesizing module 'chaotic_puf_rngcnt_clkdiv' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:23]
+	Parameter TW bound to: 4 - type: integer 
+	Parameter IDEL bound to: 3'b000 
+	Parameter TRIG1 bound to: 3'b001 
+	Parameter READ1 bound to: 3'b011 
+	Parameter TRIG2 bound to: 3'b010 
+	Parameter READ2 bound to: 3'b110 
+INFO: [Synth 8-638] synthesizing module 'SOIPUF64x4' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:23]
+	Parameter TW bound to: 4 - type: integer 
+	Parameter ST bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:36]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:37]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:38]
+INFO: [Synth 8-638] synthesizing module 'nandLatch' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/nandLatch.v:3]
+INFO: [Synth 8-638] synthesizing module 'LUT2' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25490]
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'LUT2' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25490]
+INFO: [Synth 8-256] done synthesizing module 'nandLatch' (2#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/nandLatch.v:3]
+INFO: [Synth 8-638] synthesizing module 'SOI_block_n64_k4' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:1]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:2]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:3]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:4]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:6]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:7]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:8]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:9]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:10]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:11]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:12]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:13]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:14]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:15]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:16]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:17]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:18]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:19]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:20]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:21]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:22]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:23]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:24]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:25]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:26]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:27]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:28]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:30]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:31]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:32]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:33]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:34]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:35]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:36]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:37]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:38]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:39]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:40]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:41]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:42]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:43]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:44]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:45]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:46]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:47]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:48]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:49]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:50]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:51]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:52]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:53]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:54]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:55]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:56]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:57]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:58]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:59]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:60]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:61]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:62]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:63]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:64]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:65]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:66]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:67]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:68]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:69]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:70]
+INFO: [Synth 8-638] synthesizing module 'MUX2to1_group' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:23]
+	Parameter DW bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:28]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:30]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:31]
+INFO: [Synth 8-256] done synthesizing module 'MUX2to1_group' (3#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SOI_block_n64_k4' (4#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+INFO: [Synth 8-638] synthesizing module 'COB_trng_group' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng_group.v:23]
+	Parameter CNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'COB_trng' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:23]
+INFO: [Synth 8-638] synthesizing module 'tero_cell' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/tero_cell.v:3]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/tero_cell.v:8]
+INFO: [Synth 8-256] done synthesizing module 'tero_cell' (5#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/tero_cell.v:3]
+WARNING: [Synth 8-350] instance 'tero0' of module 'tero_cell' requires 5 connections, but only 4 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:44]
+WARNING: [Synth 8-350] instance 'tero1' of module 'tero_cell' requires 5 connections, but only 4 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:47]
+WARNING: [Synth 8-350] instance 'tero2' of module 'tero_cell' requires 5 connections, but only 4 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:50]
+WARNING: [Synth 8-350] instance 'tero3' of module 'tero_cell' requires 5 connections, but only 4 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:53]
+INFO: [Synth 8-256] done synthesizing module 'COB_trng' (6#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng.v:23]
+INFO: [Synth 8-256] done synthesizing module 'COB_trng_group' (7#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/COB_trng_group.v:23]
+WARNING: [Synth 8-3848] Net tero_resp in module/entity SOIPUF64x4 does not have driver. [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:33]
+WARNING: [Synth 8-3848] Net tero_rand in module/entity SOIPUF64x4 does not have driver. [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:34]
+INFO: [Synth 8-256] done synthesizing module 'SOIPUF64x4' (8#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:23]
+WARNING: [Synth 8-350] instance 'SOIPUF64x4_core' of module 'SOIPUF64x4' requires 6 connections, but only 5 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:218]
+INFO: [Synth 8-638] synthesizing module 'SOIPUF64x2' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:23]
+	Parameter TW bound to: 2 - type: integer 
+	Parameter ST bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:36]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:37]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:38]
+INFO: [Synth 8-638] synthesizing module 'SOI_block_n64_k2' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:1]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:2]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:3]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:4]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:6]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:7]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:8]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:9]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:10]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:11]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:12]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:13]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:14]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:15]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:16]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:17]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:18]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:19]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:20]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:21]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:22]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:23]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'MUX2to1_group__parameterized0' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:23]
+	Parameter DW bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX2to1_group__parameterized0' (8#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/MUX2to1_group.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SOI_block_n64_k2' (9#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3848] Net tero_resp in module/entity SOIPUF64x2 does not have driver. [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:33]
+WARNING: [Synth 8-3848] Net tero_rand in module/entity SOIPUF64x2 does not have driver. [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:34]
+INFO: [Synth 8-256] done synthesizing module 'SOIPUF64x2' (10#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:23]
+WARNING: [Synth 8-350] instance 'SOIPUF64x2_core' of module 'SOIPUF64x2' requires 6 connections, but only 5 given [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:228]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/clk_div.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (11#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/clk_div.v:23]
+INFO: [Synth 8-256] done synthesizing module 'chaotic_puf_rngcnt_clkdiv' (12#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v:23]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:239]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:240]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg6_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:241]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg7_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:242]
+INFO: [Synth 8-256] done synthesizing module 'chaotic_puf_4lines_64stages_v1_0_S00_AXI' (13#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-256] done synthesizing module 'chaotic_puf_4lines_64stages_v1_0' (14#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_chaotic_puf_4lines_64stages_0_5' (15#1) [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/synth/design_1_chaotic_puf_4lines_64stages_0_5.v:56]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[31]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[30]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[29]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[28]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[27]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[26]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[25]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[24]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[23]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[22]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[21]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[20]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[19]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[18]
+WARNING: [Synth 8-3331] design chaotic_puf_rngcnt_clkdiv has unconnected port cfg[17]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design chaotic_puf_4lines_64stages_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 430.172 ; gain = 150.781
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[31] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[30] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[29] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[28] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[27] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[26] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[25] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[24] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[23] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[22] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[21] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[20] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[19] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[18] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[17] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[16] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[15] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[14] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[13] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[12] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[11] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[10] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[9] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[8] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[7] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[6] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[5] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[4] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[3] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[2] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[1] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[0] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[31] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[30] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[29] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[28] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[27] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[26] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[25] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[24] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[23] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[22] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[21] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[20] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[19] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[18] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[17] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[16] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[15] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[14] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[13] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[12] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[11] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[10] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[9] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[8] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[7] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[6] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[5] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[4] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[3] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[2] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[1] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[0] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x4.v:142]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[31] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[30] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[29] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[28] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[27] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[26] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[25] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[24] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[23] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[22] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[21] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[20] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[19] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[18] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[17] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[16] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[15] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[14] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[13] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[12] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[11] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[10] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[9] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[8] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[7] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[6] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[5] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[4] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[3] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[2] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[1] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:resp[0] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[31] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[30] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[29] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+WARNING: [Synth 8-3295] tying undriven pin COB_array:rand[28] to constant 0 [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/SOIPUF64x2.v:91]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 430.172 ; gain = 150.781
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 788.211 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.211 ; gain = 508.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.211 ; gain = 508.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 788.211 ; gain = 508.820
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/clk_div.v:34]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 788.211 ; gain = 508.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   4 Input      1 Bit         XORs := 64    
++---XORs : 
+	                4 Bit    Wide XORs := 1     
+	                2 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 14    
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 266   
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 8     
+	   8 Input     32 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 64    
+	   2 Input      4 Bit        Muxes := 64    
+	   4 Input      1 Bit        Muxes := 64    
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MUX2to1_group 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module tero_cell 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module COB_trng 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module SOIPUF64x4 
+Detailed RTL Component Info : 
++---XORs : 
+	                4 Bit    Wide XORs := 1     
+Module MUX2to1_group__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module SOIPUF64x2 
+Detailed RTL Component Info : 
++---XORs : 
+	                2 Bit    Wide XORs := 1     
+Module clk_div 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module chaotic_puf_rngcnt_clkdiv 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
+Module chaotic_puf_4lines_64stages_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/puf_top_core/clk_div/counter_reg was removed.  [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/e5da/src/clk_div.v:34]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_chaotic_puf_4lines_64stages_0_5 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[31]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[30]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[29]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[28]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[27]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[26]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[25]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[24]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[23]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[22]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[21]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[20]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[19]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[18]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[17]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[16]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[15]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[14]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[13]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[12]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[11]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[10]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[9]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[8]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[7]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[6]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[5]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[4]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[3]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[2]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/slv_reg2_reg[1]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+INFO: [Synth 8-3332] Sequential element (inst/chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_chaotic_puf_4lines_64stages_0_5.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 788.211 ; gain = 508.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 809.855 ; gain = 530.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 811.395 ; gain = 532.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     7|
+|2     |LUT1   |   292|
+|3     |LUT2   |   593|
+|4     |LUT3   |   770|
+|5     |LUT4   |   159|
+|6     |LUT5   |   135|
+|7     |LUT6   |    76|
+|8     |MUXF7  |    32|
+|9     |FDCE   |   266|
+|10    |FDRE   |   413|
+|11    |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------------+-----------------------------------------+------+
+|      |Instance                                          |Module                                   |Cells |
++------+--------------------------------------------------+-----------------------------------------+------+
+|1     |top                                               |                                         |  2744|
+|2     |  inst                                            |chaotic_puf_4lines_64stages_v1_0         |  2744|
+|3     |    chaotic_puf_4lines_64stages_v1_0_S00_AXI_inst |chaotic_puf_4lines_64stages_v1_0_S00_AXI |  2744|
+|4     |      puf_top_core                                |chaotic_puf_rngcnt_clkdiv                |  2575|
+|5     |        SOIPUF64x4_core                           |SOIPUF64x4                               |  1120|
+|6     |          delay_sym                               |SOI_block_n64_k4                         |   527|
+|7     |            stage0                                |MUX2to1_group__1                         |     8|
+|8     |            stage1                                |MUX2to1_group__2                         |     8|
+|9     |            stage2                                |MUX2to1_group__3                         |     8|
+|10    |            stage3                                |MUX2to1_group__4                         |     8|
+|11    |            stage4                                |MUX2to1_group__5                         |     8|
+|12    |            stage5                                |MUX2to1_group__6                         |     8|
+|13    |            stage6                                |MUX2to1_group__7                         |     8|
+|14    |            stage7                                |MUX2to1_group__8                         |     8|
+|15    |            stage8                                |MUX2to1_group__9                         |     8|
+|16    |            stage9                                |MUX2to1_group__10                        |     8|
+|17    |            stage10                               |MUX2to1_group__11                        |     8|
+|18    |            stage11                               |MUX2to1_group__12                        |     8|
+|19    |            stage12                               |MUX2to1_group__13                        |     8|
+|20    |            stage13                               |MUX2to1_group__14                        |     8|
+|21    |            stage14                               |MUX2to1_group__15                        |     8|
+|22    |            stage15                               |MUX2to1_group__16                        |     8|
+|23    |            stage16                               |MUX2to1_group__17                        |     8|
+|24    |            stage17                               |MUX2to1_group__18                        |     8|
+|25    |            stage18                               |MUX2to1_group__19                        |     8|
+|26    |            stage19                               |MUX2to1_group__20                        |     8|
+|27    |            stage20                               |MUX2to1_group__21                        |     8|
+|28    |            stage21                               |MUX2to1_group__22                        |     8|
+|29    |            stage22                               |MUX2to1_group__23                        |     8|
+|30    |            stage23                               |MUX2to1_group__24                        |     8|
+|31    |            stage24                               |MUX2to1_group__25                        |     8|
+|32    |            stage25                               |MUX2to1_group__26                        |     8|
+|33    |            stage26                               |MUX2to1_group__27                        |     8|
+|34    |            stage27                               |MUX2to1_group__28                        |     8|
+|35    |            stage28                               |MUX2to1_group__29                        |     8|
+|36    |            stage29                               |MUX2to1_group__30                        |     8|
+|37    |            stage30                               |MUX2to1_group__31                        |     8|
+|38    |            stage31                               |MUX2to1_group__32                        |     8|
+|39    |            stage32                               |MUX2to1_group__33                        |     8|
+|40    |            stage33                               |MUX2to1_group__34                        |     8|
+|41    |            stage34                               |MUX2to1_group__35                        |     8|
+|42    |            stage35                               |MUX2to1_group__36                        |     8|
+|43    |            stage36                               |MUX2to1_group__37                        |     8|
+|44    |            stage37                               |MUX2to1_group__38                        |     8|
+|45    |            stage38                               |MUX2to1_group__39                        |     8|
+|46    |            stage39                               |MUX2to1_group__40                        |     8|
+|47    |            stage40                               |MUX2to1_group__41                        |     8|
+|48    |            stage41                               |MUX2to1_group__42                        |     8|
+|49    |            stage42                               |MUX2to1_group__43                        |     8|
+|50    |            stage43                               |MUX2to1_group__44                        |     8|
+|51    |            stage44                               |MUX2to1_group__45                        |     8|
+|52    |            stage45                               |MUX2to1_group__46                        |     8|
+|53    |            stage46                               |MUX2to1_group__47                        |     8|
+|54    |            stage47                               |MUX2to1_group__48                        |     8|
+|55    |            stage48                               |MUX2to1_group__49                        |     8|
+|56    |            stage49                               |MUX2to1_group__50                        |     8|
+|57    |            stage50                               |MUX2to1_group__51                        |     8|
+|58    |            stage51                               |MUX2to1_group__52                        |     8|
+|59    |            stage52                               |MUX2to1_group__53                        |     8|
+|60    |            stage53                               |MUX2to1_group__54                        |     8|
+|61    |            stage54                               |MUX2to1_group__55                        |     8|
+|62    |            stage55                               |MUX2to1_group__56                        |     8|
+|63    |            stage56                               |MUX2to1_group__57                        |     8|
+|64    |            stage57                               |MUX2to1_group__58                        |     8|
+|65    |            stage58                               |MUX2to1_group__59                        |     8|
+|66    |            stage59                               |MUX2to1_group__60                        |     8|
+|67    |            stage60                               |MUX2to1_group__61                        |     8|
+|68    |            stage61                               |MUX2to1_group__62                        |     8|
+|69    |            stage62                               |MUX2to1_group__63                        |     8|
+|70    |            stage63                               |MUX2to1_group                            |     8|
+|71    |          \arb[0].ARBITER_nand                    |nandLatch__1                             |     2|
+|72    |          \arb[1].ARBITER_nand                    |nandLatch__2                             |     2|
+|73    |          \arb[2].ARBITER_nand                    |nandLatch__3                             |     2|
+|74    |          \arb[3].ARBITER_nand                    |nandLatch__4                             |     2|
+|75    |          COB_array                               |COB_trng_group_0                         |   576|
+|76    |            \COB[0].n0                            |COB_trng__33                             |    18|
+|77    |              tero0                               |tero_cell__135                           |     4|
+|78    |              tero1                               |tero_cell__134                           |     4|
+|79    |              tero2                               |tero_cell__133                           |     4|
+|80    |              tero3                               |tero_cell__132                           |     4|
+|81    |            \COB[1].n0                            |COB_trng__34                             |    18|
+|82    |              tero0                               |tero_cell__139                           |     4|
+|83    |              tero1                               |tero_cell__138                           |     4|
+|84    |              tero2                               |tero_cell__137                           |     4|
+|85    |              tero3                               |tero_cell__136                           |     4|
+|86    |            \COB[2].n0                            |COB_trng__35                             |    18|
+|87    |              tero0                               |tero_cell__143                           |     4|
+|88    |              tero1                               |tero_cell__142                           |     4|
+|89    |              tero2                               |tero_cell__141                           |     4|
+|90    |              tero3                               |tero_cell__140                           |     4|
+|91    |            \COB[3].n0                            |COB_trng__36                             |    18|
+|92    |              tero0                               |tero_cell__147                           |     4|
+|93    |              tero1                               |tero_cell__146                           |     4|
+|94    |              tero2                               |tero_cell__145                           |     4|
+|95    |              tero3                               |tero_cell__144                           |     4|
+|96    |            \COB[4].n0                            |COB_trng__37                             |    18|
+|97    |              tero0                               |tero_cell__151                           |     4|
+|98    |              tero1                               |tero_cell__150                           |     4|
+|99    |              tero2                               |tero_cell__149                           |     4|
+|100   |              tero3                               |tero_cell__148                           |     4|
+|101   |            \COB[5].n0                            |COB_trng__38                             |    18|
+|102   |              tero0                               |tero_cell__155                           |     4|
+|103   |              tero1                               |tero_cell__154                           |     4|
+|104   |              tero2                               |tero_cell__153                           |     4|
+|105   |              tero3                               |tero_cell__152                           |     4|
+|106   |            \COB[6].n0                            |COB_trng__39                             |    18|
+|107   |              tero0                               |tero_cell__159                           |     4|
+|108   |              tero1                               |tero_cell__158                           |     4|
+|109   |              tero2                               |tero_cell__157                           |     4|
+|110   |              tero3                               |tero_cell__156                           |     4|
+|111   |            \COB[7].n0                            |COB_trng__40                             |    18|
+|112   |              tero0                               |tero_cell__163                           |     4|
+|113   |              tero1                               |tero_cell__162                           |     4|
+|114   |              tero2                               |tero_cell__161                           |     4|
+|115   |              tero3                               |tero_cell__160                           |     4|
+|116   |            \COB[8].n0                            |COB_trng__41                             |    18|
+|117   |              tero0                               |tero_cell__167                           |     4|
+|118   |              tero1                               |tero_cell__166                           |     4|
+|119   |              tero2                               |tero_cell__165                           |     4|
+|120   |              tero3                               |tero_cell__164                           |     4|
+|121   |            \COB[9].n0                            |COB_trng__42                             |    18|
+|122   |              tero0                               |tero_cell__171                           |     4|
+|123   |              tero1                               |tero_cell__170                           |     4|
+|124   |              tero2                               |tero_cell__169                           |     4|
+|125   |              tero3                               |tero_cell__168                           |     4|
+|126   |            \COB[10].n0                           |COB_trng__43                             |    18|
+|127   |              tero0                               |tero_cell__175                           |     4|
+|128   |              tero1                               |tero_cell__174                           |     4|
+|129   |              tero2                               |tero_cell__173                           |     4|
+|130   |              tero3                               |tero_cell__172                           |     4|
+|131   |            \COB[11].n0                           |COB_trng__44                             |    18|
+|132   |              tero0                               |tero_cell__179                           |     4|
+|133   |              tero1                               |tero_cell__178                           |     4|
+|134   |              tero2                               |tero_cell__177                           |     4|
+|135   |              tero3                               |tero_cell__176                           |     4|
+|136   |            \COB[12].n0                           |COB_trng__45                             |    18|
+|137   |              tero0                               |tero_cell__183                           |     4|
+|138   |              tero1                               |tero_cell__182                           |     4|
+|139   |              tero2                               |tero_cell__181                           |     4|
+|140   |              tero3                               |tero_cell__180                           |     4|
+|141   |            \COB[13].n0                           |COB_trng__46                             |    18|
+|142   |              tero0                               |tero_cell__187                           |     4|
+|143   |              tero1                               |tero_cell__186                           |     4|
+|144   |              tero2                               |tero_cell__185                           |     4|
+|145   |              tero3                               |tero_cell__184                           |     4|
+|146   |            \COB[14].n0                           |COB_trng__47                             |    18|
+|147   |              tero0                               |tero_cell__191                           |     4|
+|148   |              tero1                               |tero_cell__190                           |     4|
+|149   |              tero2                               |tero_cell__189                           |     4|
+|150   |              tero3                               |tero_cell__188                           |     4|
+|151   |            \COB[15].n0                           |COB_trng__48                             |    18|
+|152   |              tero0                               |tero_cell__195                           |     4|
+|153   |              tero1                               |tero_cell__194                           |     4|
+|154   |              tero2                               |tero_cell__193                           |     4|
+|155   |              tero3                               |tero_cell__192                           |     4|
+|156   |            \COB[16].n0                           |COB_trng__49                             |    18|
+|157   |              tero0                               |tero_cell__199                           |     4|
+|158   |              tero1                               |tero_cell__198                           |     4|
+|159   |              tero2                               |tero_cell__197                           |     4|
+|160   |              tero3                               |tero_cell__196                           |     4|
+|161   |            \COB[17].n0                           |COB_trng__50                             |    18|
+|162   |              tero0                               |tero_cell__203                           |     4|
+|163   |              tero1                               |tero_cell__202                           |     4|
+|164   |              tero2                               |tero_cell__201                           |     4|
+|165   |              tero3                               |tero_cell__200                           |     4|
+|166   |            \COB[18].n0                           |COB_trng__51                             |    18|
+|167   |              tero0                               |tero_cell__207                           |     4|
+|168   |              tero1                               |tero_cell__206                           |     4|
+|169   |              tero2                               |tero_cell__205                           |     4|
+|170   |              tero3                               |tero_cell__204                           |     4|
+|171   |            \COB[19].n0                           |COB_trng__52                             |    18|
+|172   |              tero0                               |tero_cell__211                           |     4|
+|173   |              tero1                               |tero_cell__210                           |     4|
+|174   |              tero2                               |tero_cell__209                           |     4|
+|175   |              tero3                               |tero_cell__208                           |     4|
+|176   |            \COB[20].n0                           |COB_trng__53                             |    18|
+|177   |              tero0                               |tero_cell__215                           |     4|
+|178   |              tero1                               |tero_cell__214                           |     4|
+|179   |              tero2                               |tero_cell__213                           |     4|
+|180   |              tero3                               |tero_cell__212                           |     4|
+|181   |            \COB[21].n0                           |COB_trng__54                             |    18|
+|182   |              tero0                               |tero_cell__219                           |     4|
+|183   |              tero1                               |tero_cell__218                           |     4|
+|184   |              tero2                               |tero_cell__217                           |     4|
+|185   |              tero3                               |tero_cell__216                           |     4|
+|186   |            \COB[22].n0                           |COB_trng__55                             |    18|
+|187   |              tero0                               |tero_cell__223                           |     4|
+|188   |              tero1                               |tero_cell__222                           |     4|
+|189   |              tero2                               |tero_cell__221                           |     4|
+|190   |              tero3                               |tero_cell__220                           |     4|
+|191   |            \COB[23].n0                           |COB_trng__56                             |    18|
+|192   |              tero0                               |tero_cell__227                           |     4|
+|193   |              tero1                               |tero_cell__226                           |     4|
+|194   |              tero2                               |tero_cell__225                           |     4|
+|195   |              tero3                               |tero_cell__224                           |     4|
+|196   |            \COB[24].n0                           |COB_trng__57                             |    18|
+|197   |              tero0                               |tero_cell__231                           |     4|
+|198   |              tero1                               |tero_cell__230                           |     4|
+|199   |              tero2                               |tero_cell__229                           |     4|
+|200   |              tero3                               |tero_cell__228                           |     4|
+|201   |            \COB[25].n0                           |COB_trng__58                             |    18|
+|202   |              tero0                               |tero_cell__235                           |     4|
+|203   |              tero1                               |tero_cell__234                           |     4|
+|204   |              tero2                               |tero_cell__233                           |     4|
+|205   |              tero3                               |tero_cell__232                           |     4|
+|206   |            \COB[26].n0                           |COB_trng__59                             |    18|
+|207   |              tero0                               |tero_cell__239                           |     4|
+|208   |              tero1                               |tero_cell__238                           |     4|
+|209   |              tero2                               |tero_cell__237                           |     4|
+|210   |              tero3                               |tero_cell__236                           |     4|
+|211   |            \COB[27].n0                           |COB_trng__60                             |    18|
+|212   |              tero0                               |tero_cell__243                           |     4|
+|213   |              tero1                               |tero_cell__242                           |     4|
+|214   |              tero2                               |tero_cell__241                           |     4|
+|215   |              tero3                               |tero_cell__240                           |     4|
+|216   |            \COB[28].n0                           |COB_trng__61                             |    18|
+|217   |              tero0                               |tero_cell__247                           |     4|
+|218   |              tero1                               |tero_cell__246                           |     4|
+|219   |              tero2                               |tero_cell__245                           |     4|
+|220   |              tero3                               |tero_cell__244                           |     4|
+|221   |            \COB[29].n0                           |COB_trng__62                             |    18|
+|222   |              tero0                               |tero_cell__251                           |     4|
+|223   |              tero1                               |tero_cell__250                           |     4|
+|224   |              tero2                               |tero_cell__249                           |     4|
+|225   |              tero3                               |tero_cell__248                           |     4|
+|226   |            \COB[30].n0                           |COB_trng__63                             |    18|
+|227   |              tero0                               |tero_cell__255                           |     4|
+|228   |              tero1                               |tero_cell__254                           |     4|
+|229   |              tero2                               |tero_cell__253                           |     4|
+|230   |              tero3                               |tero_cell__252                           |     4|
+|231   |            \COB[31].n0                           |COB_trng__1                              |    18|
+|232   |              tero0                               |tero_cell__129                           |     4|
+|233   |              tero1                               |tero_cell__130                           |     4|
+|234   |              tero2                               |tero_cell__131                           |     4|
+|235   |              tero3                               |tero_cell__1                             |     4|
+|236   |        SOIPUF64x2_core                           |SOIPUF64x2                               |   848|
+|237   |          delay_sym                               |SOI_block_n64_k2                         |   263|
+|238   |            stage0                                |MUX2to1_group__parameterized0__1         |     4|
+|239   |            stage1                                |MUX2to1_group__parameterized0__2         |     4|
+|240   |            stage2                                |MUX2to1_group__parameterized0__3         |     4|
+|241   |            stage3                                |MUX2to1_group__parameterized0__4         |     4|
+|242   |            stage4                                |MUX2to1_group__parameterized0__5         |     4|
+|243   |            stage5                                |MUX2to1_group__parameterized0__6         |     4|
+|244   |            stage6                                |MUX2to1_group__parameterized0__7         |     4|
+|245   |            stage7                                |MUX2to1_group__parameterized0__8         |     4|
+|246   |            stage8                                |MUX2to1_group__parameterized0__9         |     4|
+|247   |            stage9                                |MUX2to1_group__parameterized0__10        |     4|
+|248   |            stage10                               |MUX2to1_group__parameterized0__11        |     4|
+|249   |            stage11                               |MUX2to1_group__parameterized0__12        |     4|
+|250   |            stage12                               |MUX2to1_group__parameterized0__13        |     4|
+|251   |            stage13                               |MUX2to1_group__parameterized0__14        |     4|
+|252   |            stage14                               |MUX2to1_group__parameterized0__15        |     4|
+|253   |            stage15                               |MUX2to1_group__parameterized0__16        |     4|
+|254   |            stage16                               |MUX2to1_group__parameterized0__17        |     4|
+|255   |            stage17                               |MUX2to1_group__parameterized0__18        |     4|
+|256   |            stage18                               |MUX2to1_group__parameterized0__19        |     4|
+|257   |            stage19                               |MUX2to1_group__parameterized0__20        |     4|
+|258   |            stage20                               |MUX2to1_group__parameterized0__21        |     4|
+|259   |            stage21                               |MUX2to1_group__parameterized0__22        |     4|
+|260   |            stage22                               |MUX2to1_group__parameterized0__23        |     4|
+|261   |            stage23                               |MUX2to1_group__parameterized0__24        |     4|
+|262   |            stage24                               |MUX2to1_group__parameterized0__25        |     4|
+|263   |            stage25                               |MUX2to1_group__parameterized0__26        |     4|
+|264   |            stage26                               |MUX2to1_group__parameterized0__27        |     4|
+|265   |            stage27                               |MUX2to1_group__parameterized0__28        |     4|
+|266   |            stage28                               |MUX2to1_group__parameterized0__29        |     4|
+|267   |            stage29                               |MUX2to1_group__parameterized0__30        |     4|
+|268   |            stage30                               |MUX2to1_group__parameterized0__31        |     4|
+|269   |            stage31                               |MUX2to1_group__parameterized0__32        |     4|
+|270   |            stage32                               |MUX2to1_group__parameterized0__33        |     4|
+|271   |            stage33                               |MUX2to1_group__parameterized0__34        |     4|
+|272   |            stage34                               |MUX2to1_group__parameterized0__35        |     4|
+|273   |            stage35                               |MUX2to1_group__parameterized0__36        |     4|
+|274   |            stage36                               |MUX2to1_group__parameterized0__37        |     4|
+|275   |            stage37                               |MUX2to1_group__parameterized0__38        |     4|
+|276   |            stage38                               |MUX2to1_group__parameterized0__39        |     4|
+|277   |            stage39                               |MUX2to1_group__parameterized0__40        |     4|
+|278   |            stage40                               |MUX2to1_group__parameterized0__41        |     4|
+|279   |            stage41                               |MUX2to1_group__parameterized0__42        |     4|
+|280   |            stage42                               |MUX2to1_group__parameterized0__43        |     4|
+|281   |            stage43                               |MUX2to1_group__parameterized0__44        |     4|
+|282   |            stage44                               |MUX2to1_group__parameterized0__45        |     4|
+|283   |            stage45                               |MUX2to1_group__parameterized0__46        |     4|
+|284   |            stage46                               |MUX2to1_group__parameterized0__47        |     4|
+|285   |            stage47                               |MUX2to1_group__parameterized0__48        |     4|
+|286   |            stage48                               |MUX2to1_group__parameterized0__49        |     4|
+|287   |            stage49                               |MUX2to1_group__parameterized0__50        |     4|
+|288   |            stage50                               |MUX2to1_group__parameterized0__51        |     4|
+|289   |            stage51                               |MUX2to1_group__parameterized0__52        |     4|
+|290   |            stage52                               |MUX2to1_group__parameterized0__53        |     4|
+|291   |            stage53                               |MUX2to1_group__parameterized0__54        |     4|
+|292   |            stage54                               |MUX2to1_group__parameterized0__55        |     4|
+|293   |            stage55                               |MUX2to1_group__parameterized0__56        |     4|
+|294   |            stage56                               |MUX2to1_group__parameterized0__57        |     4|
+|295   |            stage57                               |MUX2to1_group__parameterized0__58        |     4|
+|296   |            stage58                               |MUX2to1_group__parameterized0__59        |     4|
+|297   |            stage59                               |MUX2to1_group__parameterized0__60        |     4|
+|298   |            stage60                               |MUX2to1_group__parameterized0__61        |     4|
+|299   |            stage61                               |MUX2to1_group__parameterized0__62        |     4|
+|300   |            stage62                               |MUX2to1_group__parameterized0__63        |     4|
+|301   |            stage63                               |MUX2to1_group__parameterized0            |     4|
+|302   |          \arb[0].ARBITER_nand                    |nandLatch__5                             |     2|
+|303   |          \arb[1].ARBITER_nand                    |nandLatch                                |     2|
+|304   |          COB_array                               |COB_trng_group                           |   576|
+|305   |            \COB[0].n0                            |COB_trng__2                              |    18|
+|306   |              tero0                               |tero_cell__8                             |     4|
+|307   |              tero1                               |tero_cell__7                             |     4|
+|308   |              tero2                               |tero_cell__6                             |     4|
+|309   |              tero3                               |tero_cell__5                             |     4|
+|310   |            \COB[1].n0                            |COB_trng__3                              |    18|
+|311   |              tero0                               |tero_cell__12                            |     4|
+|312   |              tero1                               |tero_cell__11                            |     4|
+|313   |              tero2                               |tero_cell__10                            |     4|
+|314   |              tero3                               |tero_cell__9                             |     4|
+|315   |            \COB[2].n0                            |COB_trng__4                              |    18|
+|316   |              tero0                               |tero_cell__16                            |     4|
+|317   |              tero1                               |tero_cell__15                            |     4|
+|318   |              tero2                               |tero_cell__14                            |     4|
+|319   |              tero3                               |tero_cell__13                            |     4|
+|320   |            \COB[3].n0                            |COB_trng__5                              |    18|
+|321   |              tero0                               |tero_cell__20                            |     4|
+|322   |              tero1                               |tero_cell__19                            |     4|
+|323   |              tero2                               |tero_cell__18                            |     4|
+|324   |              tero3                               |tero_cell__17                            |     4|
+|325   |            \COB[4].n0                            |COB_trng__6                              |    18|
+|326   |              tero0                               |tero_cell__24                            |     4|
+|327   |              tero1                               |tero_cell__23                            |     4|
+|328   |              tero2                               |tero_cell__22                            |     4|
+|329   |              tero3                               |tero_cell__21                            |     4|
+|330   |            \COB[5].n0                            |COB_trng__7                              |    18|
+|331   |              tero0                               |tero_cell__28                            |     4|
+|332   |              tero1                               |tero_cell__27                            |     4|
+|333   |              tero2                               |tero_cell__26                            |     4|
+|334   |              tero3                               |tero_cell__25                            |     4|
+|335   |            \COB[6].n0                            |COB_trng__8                              |    18|
+|336   |              tero0                               |tero_cell__32                            |     4|
+|337   |              tero1                               |tero_cell__31                            |     4|
+|338   |              tero2                               |tero_cell__30                            |     4|
+|339   |              tero3                               |tero_cell__29                            |     4|
+|340   |            \COB[7].n0                            |COB_trng__9                              |    18|
+|341   |              tero0                               |tero_cell__36                            |     4|
+|342   |              tero1                               |tero_cell__35                            |     4|
+|343   |              tero2                               |tero_cell__34                            |     4|
+|344   |              tero3                               |tero_cell__33                            |     4|
+|345   |            \COB[8].n0                            |COB_trng__10                             |    18|
+|346   |              tero0                               |tero_cell__40                            |     4|
+|347   |              tero1                               |tero_cell__39                            |     4|
+|348   |              tero2                               |tero_cell__38                            |     4|
+|349   |              tero3                               |tero_cell__37                            |     4|
+|350   |            \COB[9].n0                            |COB_trng__11                             |    18|
+|351   |              tero0                               |tero_cell__44                            |     4|
+|352   |              tero1                               |tero_cell__43                            |     4|
+|353   |              tero2                               |tero_cell__42                            |     4|
+|354   |              tero3                               |tero_cell__41                            |     4|
+|355   |            \COB[10].n0                           |COB_trng__12                             |    18|
+|356   |              tero0                               |tero_cell__48                            |     4|
+|357   |              tero1                               |tero_cell__47                            |     4|
+|358   |              tero2                               |tero_cell__46                            |     4|
+|359   |              tero3                               |tero_cell__45                            |     4|
+|360   |            \COB[11].n0                           |COB_trng__13                             |    18|
+|361   |              tero0                               |tero_cell__52                            |     4|
+|362   |              tero1                               |tero_cell__51                            |     4|
+|363   |              tero2                               |tero_cell__50                            |     4|
+|364   |              tero3                               |tero_cell__49                            |     4|
+|365   |            \COB[12].n0                           |COB_trng__14                             |    18|
+|366   |              tero0                               |tero_cell__56                            |     4|
+|367   |              tero1                               |tero_cell__55                            |     4|
+|368   |              tero2                               |tero_cell__54                            |     4|
+|369   |              tero3                               |tero_cell__53                            |     4|
+|370   |            \COB[13].n0                           |COB_trng__15                             |    18|
+|371   |              tero0                               |tero_cell__60                            |     4|
+|372   |              tero1                               |tero_cell__59                            |     4|
+|373   |              tero2                               |tero_cell__58                            |     4|
+|374   |              tero3                               |tero_cell__57                            |     4|
+|375   |            \COB[14].n0                           |COB_trng__16                             |    18|
+|376   |              tero0                               |tero_cell__64                            |     4|
+|377   |              tero1                               |tero_cell__63                            |     4|
+|378   |              tero2                               |tero_cell__62                            |     4|
+|379   |              tero3                               |tero_cell__61                            |     4|
+|380   |            \COB[15].n0                           |COB_trng__17                             |    18|
+|381   |              tero0                               |tero_cell__68                            |     4|
+|382   |              tero1                               |tero_cell__67                            |     4|
+|383   |              tero2                               |tero_cell__66                            |     4|
+|384   |              tero3                               |tero_cell__65                            |     4|
+|385   |            \COB[16].n0                           |COB_trng__18                             |    18|
+|386   |              tero0                               |tero_cell__72                            |     4|
+|387   |              tero1                               |tero_cell__71                            |     4|
+|388   |              tero2                               |tero_cell__70                            |     4|
+|389   |              tero3                               |tero_cell__69                            |     4|
+|390   |            \COB[17].n0                           |COB_trng__19                             |    18|
+|391   |              tero0                               |tero_cell__76                            |     4|
+|392   |              tero1                               |tero_cell__75                            |     4|
+|393   |              tero2                               |tero_cell__74                            |     4|
+|394   |              tero3                               |tero_cell__73                            |     4|
+|395   |            \COB[18].n0                           |COB_trng__20                             |    18|
+|396   |              tero0                               |tero_cell__80                            |     4|
+|397   |              tero1                               |tero_cell__79                            |     4|
+|398   |              tero2                               |tero_cell__78                            |     4|
+|399   |              tero3                               |tero_cell__77                            |     4|
+|400   |            \COB[19].n0                           |COB_trng__21                             |    18|
+|401   |              tero0                               |tero_cell__84                            |     4|
+|402   |              tero1                               |tero_cell__83                            |     4|
+|403   |              tero2                               |tero_cell__82                            |     4|
+|404   |              tero3                               |tero_cell__81                            |     4|
+|405   |            \COB[20].n0                           |COB_trng__22                             |    18|
+|406   |              tero0                               |tero_cell__88                            |     4|
+|407   |              tero1                               |tero_cell__87                            |     4|
+|408   |              tero2                               |tero_cell__86                            |     4|
+|409   |              tero3                               |tero_cell__85                            |     4|
+|410   |            \COB[21].n0                           |COB_trng__23                             |    18|
+|411   |              tero0                               |tero_cell__92                            |     4|
+|412   |              tero1                               |tero_cell__91                            |     4|
+|413   |              tero2                               |tero_cell__90                            |     4|
+|414   |              tero3                               |tero_cell__89                            |     4|
+|415   |            \COB[22].n0                           |COB_trng__24                             |    18|
+|416   |              tero0                               |tero_cell__96                            |     4|
+|417   |              tero1                               |tero_cell__95                            |     4|
+|418   |              tero2                               |tero_cell__94                            |     4|
+|419   |              tero3                               |tero_cell__93                            |     4|
+|420   |            \COB[23].n0                           |COB_trng__25                             |    18|
+|421   |              tero0                               |tero_cell__100                           |     4|
+|422   |              tero1                               |tero_cell__99                            |     4|
+|423   |              tero2                               |tero_cell__98                            |     4|
+|424   |              tero3                               |tero_cell__97                            |     4|
+|425   |            \COB[24].n0                           |COB_trng__26                             |    18|
+|426   |              tero0                               |tero_cell__104                           |     4|
+|427   |              tero1                               |tero_cell__103                           |     4|
+|428   |              tero2                               |tero_cell__102                           |     4|
+|429   |              tero3                               |tero_cell__101                           |     4|
+|430   |            \COB[25].n0                           |COB_trng__27                             |    18|
+|431   |              tero0                               |tero_cell__108                           |     4|
+|432   |              tero1                               |tero_cell__107                           |     4|
+|433   |              tero2                               |tero_cell__106                           |     4|
+|434   |              tero3                               |tero_cell__105                           |     4|
+|435   |            \COB[26].n0                           |COB_trng__28                             |    18|
+|436   |              tero0                               |tero_cell__112                           |     4|
+|437   |              tero1                               |tero_cell__111                           |     4|
+|438   |              tero2                               |tero_cell__110                           |     4|
+|439   |              tero3                               |tero_cell__109                           |     4|
+|440   |            \COB[27].n0                           |COB_trng__29                             |    18|
+|441   |              tero0                               |tero_cell__116                           |     4|
+|442   |              tero1                               |tero_cell__115                           |     4|
+|443   |              tero2                               |tero_cell__114                           |     4|
+|444   |              tero3                               |tero_cell__113                           |     4|
+|445   |            \COB[28].n0                           |COB_trng__30                             |    18|
+|446   |              tero0                               |tero_cell__120                           |     4|
+|447   |              tero1                               |tero_cell__119                           |     4|
+|448   |              tero2                               |tero_cell__118                           |     4|
+|449   |              tero3                               |tero_cell__117                           |     4|
+|450   |            \COB[29].n0                           |COB_trng__31                             |    18|
+|451   |              tero0                               |tero_cell__124                           |     4|
+|452   |              tero1                               |tero_cell__123                           |     4|
+|453   |              tero2                               |tero_cell__122                           |     4|
+|454   |              tero3                               |tero_cell__121                           |     4|
+|455   |            \COB[30].n0                           |COB_trng__32                             |    18|
+|456   |              tero0                               |tero_cell__128                           |     4|
+|457   |              tero1                               |tero_cell__127                           |     4|
+|458   |              tero2                               |tero_cell__126                           |     4|
+|459   |              tero3                               |tero_cell__125                           |     4|
+|460   |            \COB[31].n0                           |COB_trng                                 |    18|
+|461   |              tero0                               |tero_cell__2                             |     4|
+|462   |              tero1                               |tero_cell__3                             |     4|
+|463   |              tero2                               |tero_cell__4                             |     4|
+|464   |              tero3                               |tero_cell                                |     4|
+|465   |        clk_div                                   |clk_div                                  |    44|
++------+--------------------------------------------------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 833.230 ; gain = 195.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 833.230 ; gain = 553.840
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+188 Infos, 150 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 837.270 ; gain = 569.359
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_5_synth_1/design_1_chaotic_puf_4lines_64stages_0_5.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/design_1_chaotic_puf_4lines_64stages_0_5.xci
+INFO: [Coretcl 2-1174] Renamed 464 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_5_synth_1/design_1_chaotic_puf_4lines_64stages_0_5.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_chaotic_puf_4lines_64stages_0_5_utilization_synth.rpt -pb design_1_chaotic_puf_4lines_64stages_0_5_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 837.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 28 11:21:46 2023...

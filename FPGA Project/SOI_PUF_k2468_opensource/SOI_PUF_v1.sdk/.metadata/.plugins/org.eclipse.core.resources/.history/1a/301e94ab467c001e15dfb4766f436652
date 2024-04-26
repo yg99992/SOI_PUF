@@ -1,0 +1,19 @@
+/*
+ * soi_puf.h
+ *
+ *  Created on: 2023Äê10ÔÂ27ÈÕ
+ *      Author: admin
+ */
+
+#ifndef SRC_SOI_PUF_H_
+#define SRC_SOI_PUF_H_
+
+int trng_read_store(puf_chaotic* puf_hw, char* file_name1, char* file_name2, int repeat_num);
+int weak_puf_read_store(puf_chaotic* puf_hw, char* file_name1, char* file_name2, int repeat_num);
+int strong_puf_read_store(puf_chaotic* puf_hw, char* file_name, int crp_num);
+int soi_strong_trng_read_store(puf_chaotic* puf_hw, char* file_name1, char* file_name2, char* file_name3, int crp_num, int repeat_num);
+int weak_puf_scan(puf_chaotic* puf_hw, u32* resp_dat_weak4, u32* resp_dat_weak2);
+int soi_test();
+int soi_init(puf_chaotic* puf_hw, u16 clk);
+
+#endif /* SRC_SOI_PUF_H_ */

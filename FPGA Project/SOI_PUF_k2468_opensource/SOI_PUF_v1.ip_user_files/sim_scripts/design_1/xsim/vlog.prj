@@ -1,0 +1,37 @@
+verilog xil_defaultlib --include "../../../../SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/02c8/hdl/verilog" --include "../../../../SOI_PUF_v1.srcs/sources_1/bd/design_1/ipshared/1313/hdl" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+"../../../bd/design_1/ipshared/e5da/src/COB_trng.v" \
+"../../../bd/design_1/ipshared/e5da/src/COB_trng_group.v" \
+"../../../bd/design_1/ipshared/e5da/src/MUX2to1_group.v" \
+"../../../bd/design_1/ipshared/e5da/src/SOIPUF64x2.v" \
+"../../../bd/design_1/ipshared/e5da/src/SOIPUF64x4.v" \
+"../../../bd/design_1/ipshared/e5da/src/SOI_block_n64_k2.v" \
+"../../../bd/design_1/ipshared/e5da/src/SOI_block_n64_k4.v" \
+"../../../bd/design_1/ipshared/e5da/src/chaotic_puf_rngcnt_clkdiv.v" \
+"../../../bd/design_1/ipshared/e5da/src/tero_cell.v" \
+"../../../bd/design_1/ipshared/e5da/src/clk_div.v" \
+"../../../bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/e5da/src/nandLatch.v" \
+"../../../bd/design_1/ipshared/e5da/hdl/chaotic_puf_4lines_64stages_v1_0.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/sim/design_1_chaotic_puf_4lines_64stages_0_5.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_6/sim/design_1_chaotic_puf_4lines_64stages_0_6.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_7/sim/design_1_chaotic_puf_4lines_64stages_0_7.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_8/sim/design_1_chaotic_puf_4lines_64stages_0_8.v" \
+"../../../bd/design_1/ipshared/4999/src/SOIPUF64x6.v" \
+"../../../bd/design_1/ipshared/4999/src/SOIPUF64x8.v" \
+"../../../bd/design_1/ipshared/4999/src/SOI_block_n64_k8.v" \
+"../../../bd/design_1/ipshared/4999/hdl/chaotic_puf_8lines_64stages_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/4999/src/chaotic_puf_rngcnt_clkdiv.v" \
+"../../../bd/design_1/ipshared/4999/src/SOI_block_n64_k6.v" \
+"../../../bd/design_1/ipshared/4999/hdl/chaotic_puf_8lines_64stages_v1_0.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_1/sim/design_1_chaotic_puf_8lines_64stages_0_1.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_2/sim/design_1_chaotic_puf_8lines_64stages_0_2.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_3/sim/design_1_chaotic_puf_8lines_64stages_0_3.v" \
+"../../../bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_4/sim/design_1_chaotic_puf_8lines_64stages_0_4.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

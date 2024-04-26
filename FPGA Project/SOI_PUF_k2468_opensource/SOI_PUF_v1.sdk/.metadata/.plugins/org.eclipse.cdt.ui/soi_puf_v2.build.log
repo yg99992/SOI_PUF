@@ -1,0 +1,160 @@
+02:31:04 **** Auto Build of configuration Debug for project soi_puf_v2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/puf_def.h:82:23: warning: 'puf_multi_read_res' declared 'static' but never defined [-Wunused-function]
+ static inline int16_t puf_multi_read_res(puf_extract* puf_hw, u8 chip_id, u8 flip_bit, u8 read_bit);
+                       ^~~~~~~~~~~~~~~~~~
+../src/puf_def.h:88:19: warning: 'LFSR' declared 'static' but never defined [-Wunused-function]
+ static inline int LFSR(unsigned long long chal, unsigned int bit_cnt, unsigned char* dat, unsigned char mode);
+                   ^~~~
+../src/puf_def.h:106:20: warning: 'chaotic_read_once' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:107:20: warning: 'chaotic_read_once_tmv' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_tmv(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_xor_val, u8 tmv_num);
+                    ^~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:108:20: warning: 'chaotic_read_calibration' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_calibration(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:112:18: warning: 'chaotic_crp_check' declared 'static' but never defined [-Wunused-function]
+ static inline u8 chaotic_crp_check(puf_chaotic* puf_hw, u16* chal_dat, u8 rpt_thr, u8 rm_bits);
+                  ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:114:20: warning: 'chaotic_read_once_flip_lsb' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_flip_lsb(puf_chaotic* puf_hw, u16* chal_dat, u8 flip_inx, u32* resp_xor_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/keccak-tiny.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/keccak-tiny.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/keccak-tiny.d" -MT"src/keccak-tiny.o" -o "src/keccak-tiny.o" "../src/keccak-tiny.c"
+'Finished building: ../src/keccak-tiny.c'
+' '
+'Building file: ../src/led.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/led.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/led.d" -MT"src/led.o" -o "src/led.o" "../src/led.c"
+'Finished building: ../src/led.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/puf_def.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/puf_def.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/puf_def.d" -MT"src/puf_def.o" -o "src/puf_def.o" "../src/puf_def.c"
+In file included from ../src/puf_def.c:21:0:
+../src/puf_def.h:82:23: warning: 'puf_multi_read_res' declared 'static' but never defined [-Wunused-function]
+ static inline int16_t puf_multi_read_res(puf_extract* puf_hw, u8 chip_id, u8 flip_bit, u8 read_bit);
+                       ^~~~~~~~~~~~~~~~~~
+../src/puf_def.h:88:19: warning: 'LFSR' declared 'static' but never defined [-Wunused-function]
+ static inline int LFSR(unsigned long long chal, unsigned int bit_cnt, unsigned char* dat, unsigned char mode);
+                   ^~~~
+../src/puf_def.h:106:20: warning: 'chaotic_read_once' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:107:20: warning: 'chaotic_read_once_tmv' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_tmv(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_xor_val, u8 tmv_num);
+                    ^~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:108:20: warning: 'chaotic_read_calibration' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_calibration(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:112:18: warning: 'chaotic_crp_check' declared 'static' but never defined [-Wunused-function]
+ static inline u8 chaotic_crp_check(puf_chaotic* puf_hw, u16* chal_dat, u8 rpt_thr, u8 rm_bits);
+                  ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:114:20: warning: 'chaotic_read_once_flip_lsb' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_flip_lsb(puf_chaotic* puf_hw, u16* chal_dat, u8 flip_inx, u32* resp_xor_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/puf_def.c'
+' '
+'Building file: ../src/sd_fun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sd_fun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd_fun.d" -MT"src/sd_fun.o" -o "src/sd_fun.o" "../src/sd_fun.c"
+../src/sd_fun.c: In function 'array_store_binfile_char':
+../src/sd_fun.c:300:15: warning: unused variable 'str_size' [-Wunused-variable]
+  unsigned int str_size;
+               ^~~~~~~~
+'Finished building: ../src/sd_fun.c'
+' '
+'Building file: ../src/soi_puf.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/soi_puf.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../soi_puf_v2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/soi_puf.d" -MT"src/soi_puf.o" -o "src/soi_puf.o" "../src/soi_puf.c"
+../src/soi_puf.c: In function 'soi_test':
+../src/soi_puf.c:49:6: warning: unused variable 'weak_rpt' [-Wunused-variable]
+  int weak_rpt = 1000;
+      ^~~~~~~~
+../src/soi_puf.c:47:8: warning: variable 'chal_name' set but not used [-Wunused-but-set-variable]
+  char* chal_name;
+        ^~~~~~~~~
+../src/soi_puf.c: In function 'soi_fast_test':
+../src/soi_puf.c:114:6: warning: unused variable 'trng2_resp' [-Wunused-variable]
+  u32 trng2_resp[100];
+      ^~~~~~~~~~
+../src/soi_puf.c:113:6: warning: unused variable 'trng4_resp' [-Wunused-variable]
+  u32 trng4_resp[100];
+      ^~~~~~~~~~
+../src/soi_puf.c: In function 'soi_SAC_test':
+../src/soi_puf.c:225:15: warning: unused variable 'puf' [-Wunused-variable]
+  puf_chaotic* puf[6];
+               ^~~
+../src/soi_puf.c: In function 'strong_puf_read_crp_store':
+../src/soi_puf.c:632:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i,j;
+      ^
+../src/soi_puf.c: In function 'strong_puf_read_resp_store':
+../src/soi_puf.c:767:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i,j;
+      ^
+../src/soi_puf.c:763:25: warning: unused variable 'chal_ptr1' [-Wunused-variable]
+  u16 *chal_dat_block1, *chal_ptr1;
+                         ^~~~~~~~~
+../src/soi_puf.c:763:7: warning: unused variable 'chal_dat_block1' [-Wunused-variable]
+  u16 *chal_dat_block1, *chal_ptr1;
+       ^~~~~~~~~~~~~~~
+In file included from ../src/soi_puf.c:16:0:
+../src/soi_puf.c: At top level:
+../src/puf_def.h:82:23: warning: 'puf_multi_read_res' declared 'static' but never defined [-Wunused-function]
+ static inline int16_t puf_multi_read_res(puf_extract* puf_hw, u8 chip_id, u8 flip_bit, u8 read_bit);
+                       ^~~~~~~~~~~~~~~~~~
+../src/puf_def.h:88:19: warning: 'LFSR' declared 'static' but never defined [-Wunused-function]
+ static inline int LFSR(unsigned long long chal, unsigned int bit_cnt, unsigned char* dat, unsigned char mode);
+                   ^~~~
+../src/puf_def.h:106:20: warning: 'chaotic_read_once' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:107:20: warning: 'chaotic_read_once_tmv' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_tmv(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_xor_val, u8 tmv_num);
+                    ^~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:108:20: warning: 'chaotic_read_calibration' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_calibration(puf_chaotic* puf_hw, u16* chal_dat, u32* resp_val, u32* stat_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/puf_def.h:112:18: warning: 'chaotic_crp_check' declared 'static' but never defined [-Wunused-function]
+ static inline u8 chaotic_crp_check(puf_chaotic* puf_hw, u16* chal_dat, u8 rpt_thr, u8 rm_bits);
+                  ^~~~~~~~~~~~~~~~~
+../src/puf_def.h:114:20: warning: 'chaotic_read_once_flip_lsb' declared 'static' but never defined [-Wunused-function]
+ static inline void chaotic_read_once_flip_lsb(puf_chaotic* puf_hw, u16* chal_dat, u8 flip_inx, u32* resp_xor_val);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/soi_puf.c: In function 'strong_puf_read_resp_store':
+../src/soi_puf.c:787:46: warning: 'dat_num' is used uninitialized in this function [-Wuninitialized]
+  trng_dat_block4 = (u32 *)malloc(sizeof(u32) * dat_num);
+                                  ~~~~~~~~~~~~^~~~~~~~~
+'Finished building: ../src/soi_puf.c'
+' '
+'Building target: soi_puf_v2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../soi_puf_v2_bsp/ps7_cortexa9_0/lib -o "soi_puf_v2.elf"  ./src/helloworld.o ./src/keccak-tiny.o ./src/led.o ./src/platform.o ./src/puf_def.o ./src/sd_fun.o ./src/soi_puf.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: soi_puf_v2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size soi_puf_v2.elf  |tee "soi_puf_v2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94712	  10436	807414048	807519196	3021c3dc	soi_puf_v2.elf
+'Finished building: soi_puf_v2.elf.size'
+' '
+
+02:31:35 Build Finished (took 30s.741ms)
+

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Apr 25 01:59:54 2024
+# Process ID: 14596
+# Current directory: D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36776 D:\FPGA_project\SOI_PUF\SOI_PUF_k2468\SOI_PUF_v1\SOI_PUF_v1.xpr
+# Log file: D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1/vivado.log
+# Journal file: D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk -hwspec D:/FPGA_project/SOI_PUF/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf

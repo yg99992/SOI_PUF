@@ -1,0 +1,1035 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov 27 21:40:12 2023
+# Process ID: 19140
+# Current directory: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16444 D:\FPGA_project\SOI_PUF_k2468\SOI_PUF_v1\SOI_PUF_v1.xpr
+# Log file: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/vivado.log
+# Journal file: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/FPGA_project/SOI_PUF/SOI_PUF_v1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 952.367 ; gain = 207.027
+update_compile_order -fileset sources_1
+create_peripheral xilinx.com user chaotic_puf_8lines_64stages 1.0 -dir D:/FPGA_project/SOI_PUF_k2468/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:chaotic_puf_8lines_64stages:1.0]
+set_property VALUE 8 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core xilinx.com:user:chaotic_puf_8lines_64stages:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:chaotic_puf_8lines_64stages:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:chaotic_puf_8lines_64stages:1.0]
+set_property  ip_repo_paths  {D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0 D:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0 D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+open_bd_design {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_5
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_0
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_1
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_2
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_3
+Adding cell -- amsv.um:user:chaotic_puf_4lines_64stages:1.0 - chaotic_puf_4lines_64stages_4
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1085.387 ; gain = 74.355
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:chaotic_puf_8lines_64stages:1.0 chaotic_puf_8lines_64stages_0
+WARNING: [BD 41-1753] The name 'chaotic_puf_8lines_64stages_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+endgroup
+ipx::edit_ip_in_project -upgrade true -name chaotic_puf_8lines_64stages_v1_0_project -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.tmp/chaotic_puf_8lines_64stages_v1_0_project d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_8lines_64stages_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/trng_xor.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/COB_trng.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOIPUF64x4.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOIPUF64x2.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOIPUF64x8.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k8.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/tero_cell.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/COB_trng_group.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/clk_div.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/trng_cnt.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/cSOI_hardware_eval.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/nandLatch.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k2.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k4.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k6.v}
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/MUX2to1_group.v
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/chaotic_puf_rngcnt_clkdiv.v
+update_compile_order -fileset sources_1
+current_project SOI_PUF_v1
+current_project chaotic_puf_8lines_64stages_v1_0_project
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/trng_xor.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/trng_cnt.v] -no_script -reset -force -quiet
+remove_files  {d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/trng_xor.v d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/trng_cnt.v}
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/cSOI_hardware_eval.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/cSOI_hardware_eval.v
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x2.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x2.v
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k2.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k2.v
+add_files -norecurse {D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k6.v}
+update_compile_order -fileset sources_1
+add_files -norecurse D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x6.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x4.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x4.v
+export_ip_user_files -of_objects  [get_files d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k4.v] -no_script -reset -force -quiet
+remove_files  d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k4.v
+launch_runs synth_1 -jobs 10
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'SOI_block_n64_k6()' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 1 of file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k6.v
+Duplicate found at line 1 of file D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v
+[Mon Nov 27 21:58:40 2023] Launched synth_1...
+Run output will be captured here: d:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_8lines_64stages_v1_0_project/chaotic_puf_8lines_64stages_v1_0_project.runs/synth_1/runme.log
+set_property source_mgmt_mode DisplayOnly [current_project]
+reorder_files -before d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/component.xml d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/component.xml
+current_project SOI_PUF_v1
+current_project chaotic_puf_8lines_64stages_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+export_ip_user_files -of_objects  [get_files D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x6.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x6.v
+add_files -norecurse D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v
+WARNING: [filemgmt 56-12] File 'D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOI_block_n64_k6.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse D:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/src/SOIPUF64x6.v
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5109] 'File Group 'xilinx_verilogsynthesis (Verilog Synthesis)'': File 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k6.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] 'File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)'': File 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/rtl_standard/SOI_block_n64_k6.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_cells chaotic_puf_8lines_64stages_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:chaotic_puf_8lines_64stages:1.0 chaotic_puf_8lines_64stages_0
+WARNING: [BD 41-1753] The name 'chaotic_puf_8lines_64stages_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+endgroup
+copy_bd_objs /  [get_bd_cells {chaotic_puf_8lines_64stages_0}]
+copy_bd_objs /  [get_bd_cells {chaotic_puf_8lines_64stages_0}]
+copy_bd_objs /  [get_bd_cells {chaotic_puf_8lines_64stages_0}]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins chaotic_puf_8lines_64stages_0/S00_AXI]
+</chaotic_puf_8lines_64stages_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C10000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins chaotic_puf_8lines_64stages_1/S00_AXI]
+</chaotic_puf_8lines_64stages_1/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C20000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins chaotic_puf_8lines_64stages_2/S00_AXI]
+</chaotic_puf_8lines_64stages_2/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C30000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins chaotic_puf_8lines_64stages_3/S00_AXI]
+</chaotic_puf_8lines_64stages_3/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C40000 [ 64K ]>
+endgroup
+regenerate_bd_layout
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_0_S00_AXI_reg}]
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_1_S00_AXI_reg}]
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_2_S00_AXI_reg}]
+set_property range 4K [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_3_S00_AXI_reg}]
+set_property offset 0x43C01000 [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_0_S00_AXI_reg}]
+set_property offset 0x43C02000 [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_1_S00_AXI_reg}]
+set_property offset 0x43C03000 [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_2_S00_AXI_reg}]
+set_property offset 0x43C04000 [get_bd_addr_segs {processing_system7_0/Data/SEG_chaotic_puf_8lines_64stages_3_S00_AXI_reg}]
+save_bd_design
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+generate_target all [get_files  D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.332 ; gain = 115.121
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_2] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_3] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_4] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 1a7672cd6f614aab; cache size = 15.548 MB.
+export_ip_user_files -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 10 {design_1_xbar_0_synth_1 design_1_chaotic_puf_8lines_64stages_0_1_synth_1 design_1_chaotic_puf_8lines_64stages_0_2_synth_1 design_1_chaotic_puf_8lines_64stages_0_3_synth_1 design_1_chaotic_puf_8lines_64stages_0_4_synth_1}
+[Mon Nov 27 22:14:19 2023] Launched design_1_xbar_0_synth_1, design_1_chaotic_puf_8lines_64stages_0_1_synth_1, design_1_chaotic_puf_8lines_64stages_0_2_synth_1, design_1_chaotic_puf_8lines_64stages_0_3_synth_1, design_1_chaotic_puf_8lines_64stages_0_4_synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_xbar_0_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_1_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_1_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_2_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_2_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_3_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_3_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_4_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_4_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files -ipstatic_source_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/modelsim} {questa=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/questa} {riviera=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper_board.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper_early.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_project/SOI_PUF/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/.Xil/Vivado-91532-DESKTOP-LFC1P5E/dbg_hub_CV.0/out/xsdbm.xdc:10]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2310.648 ; gain = 574.215
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp1/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2326.199 ; gain = 11.668
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2326.199 ; gain = 11.668
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 58 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 52 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 2410.859 ; gain = 1077.234
+open_report: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2500.094 ; gain = 52.887
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Mon Nov 27 22:31:38 2023] Launched synth_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_2
+Design is defaulting to synth run part: xc7z020clg400-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/design_1_chaotic_puf_4lines_64stages_0_5.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_6/design_1_chaotic_puf_4lines_64stages_0_6.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_7/design_1_chaotic_puf_4lines_64stages_0_7.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_8/design_1_chaotic_puf_4lines_64stages_0_8.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_9/design_1_chaotic_puf_4lines_64stages_0_9.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_4'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_10/design_1_chaotic_puf_4lines_64stages_0_10.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_5'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_1/design_1_chaotic_puf_8lines_64stages_0_1.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_2/design_1_chaotic_puf_8lines_64stages_0_2.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_3/design_1_chaotic_puf_8lines_64stages_0_3.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_4/design_1_chaotic_puf_8lines_64stages_0_4.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 248 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/new/TRNG_counter.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/new/TRNG_counter.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/SOI_PUF_v1/SOIPUF_2x64_4x64_sym.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/SOI_PUF_v1/SOIPUF_2x64_4x64_sym.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 2687.055 ; gain = 0.000
+open_bd_design {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells chaotic_puf_4lines_64stages_5]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M11_AXI] [get_bd_cells chaotic_puf_4lines_64stages_4]
+save_bd_design
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+report_ip_status -name ip_status 
+generate_target all [get_files  D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2687.055 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 1a7672cd6f614aab; cache size = 19.746 MB.
+export_ip_user_files -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 10 design_1_xbar_0_synth_1
+[Mon Nov 27 23:05:07 2023] Launched design_1_xbar_0_synth_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_xbar_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files -ipstatic_source_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/modelsim} {questa=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/questa} {riviera=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/SOI_PUF_v1/SOIPUF_2x64_4x64_sym.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_2 D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/SOI_PUF_v1/SOIPUF_2x64_4x64_sym.xdc
+file delete -force D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/SOI_PUF_v1/SOIPUF_2x64_4x64_sym.xdc
+export_ip_user_files -of_objects  [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/new/TRNG_counter.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_2 D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/new/TRNG_counter.xdc
+file delete -force D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/new/TRNG_counter.xdc
+add_files -fileset constrs_2 -norecurse D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/design_1_chaotic_puf_4lines_64stages_0_5.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_6/design_1_chaotic_puf_4lines_64stages_0_6.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_7/design_1_chaotic_puf_4lines_64stages_0_7.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_8/design_1_chaotic_puf_4lines_64stages_0_8.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_1/design_1_chaotic_puf_8lines_64stages_0_1.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_2/design_1_chaotic_puf_8lines_64stages_0_2.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_3/design_1_chaotic_puf_8lines_64stages_0_3.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_4/design_1_chaotic_puf_8lines_64stages_0_4.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8675]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8675]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8676]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8676]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_5'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8677]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8677]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_5'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8678]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8678]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_6'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8679]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8679]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/i_6'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8680]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8680]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8684]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8684]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8685]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8685]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8686]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8686]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8687]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8687]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8688]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8688]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8689]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8689]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8690]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8690]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage0/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8691]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8691]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8692]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8692]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8693]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8693]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8694]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8694]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8695]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8695]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8696]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8696]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8697]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8697]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8698]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8698]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage1/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8699]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8699]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8700]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8700]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8701]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8701]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8702]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8702]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8703]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8703]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8704]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8704]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8705]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8705]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8706]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8706]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage2/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8707]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8707]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8708]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8708]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8709]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8709]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8710]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8710]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8711]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8711]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8712]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8712]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8713]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8713]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8714]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8714]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage3/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8715]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8715]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8716]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8716]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8717]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8717]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8718]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8718]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8719]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8719]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8720]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8720]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8721]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8721]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8722]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8722]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage4/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8723]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8723]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8724]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8724]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8725]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8725]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8726]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8726]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8727]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8727]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8728]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8728]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8729]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8729]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8730]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8730]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage5/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8731]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8731]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8732]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8732]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8733]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8733]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8734]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8734]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8735]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8735]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8736]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8736]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8737]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8737]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8738]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8738]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage6/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8739]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8739]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8740]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8740]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8741]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8741]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8742]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8742]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8743]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8743]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8744]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8744]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8745]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8745]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8746]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8746]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage7/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8747]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8747]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8748]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8748]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8749]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8749]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8750]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8750]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8751]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8751]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8752]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8752]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8753]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8753]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8754]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8754]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage8/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8755]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8755]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8756]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8756]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8757]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8757]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8758]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8758]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8759]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8759]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8760]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8760]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8761]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8761]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8762]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8762]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage9/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8763]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8763]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8764]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8764]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8765]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8765]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8766]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8766]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8767]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8767]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8768]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8768]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8769]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8769]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8770]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8770]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage10/oD_inferred_i_4'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8771]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8771]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8772]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8772]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_1'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8773]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8773]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8774]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8774]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_2'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8775]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8775]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8776]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8776]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/chaotic_puf_8lines_64stages_0/inst/chaotic_puf_8lines_64stages_v1_0_S00_AXI_inst/puf_top_core/SOIPUF64x2_core/delay_sym/stage11/oD_inferred_i_3'. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8777]
+INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8777]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8777]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:8777]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18520]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18522]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18524]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18526]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18528]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18530]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18532]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y50' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18534]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18536]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18538]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18540]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18542]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18544]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18546]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18548]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y51' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18550]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18552]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18554]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18556]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18558]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18560]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18562]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18564]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y52' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18566]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18568]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18570]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18572]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18574]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18576]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18578]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18580]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y53' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18582]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18584]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18586]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18588]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18590]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18592]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18594]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18596]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y54' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18598]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18600]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18602]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18604]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18606]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18608]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18610]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18612]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y55' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18614]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18616]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18618]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18620]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18622]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18624]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18626]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18628]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y56' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18630]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18632]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18634]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18636]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18638]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18640]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18642]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18644]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y57' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18646]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18648]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18650]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18652]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18654]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18656]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18658]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18660]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y58' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18662]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18664]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18666]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18668]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18670]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18672]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18674]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18676]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y59' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18678]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18680]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18682]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18684]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18686]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18688]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18690]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18692]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y60' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18694]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18696]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18698]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18700]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18702]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18704]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18706]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18708]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X69Y61' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18710]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y62' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18712]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y62' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18714]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y62' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18716]
+CRITICAL WARNING: [Common 17-69] Command failed: 'SLICE_X68Y62' is not a valid site name. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18718]
+INFO: [Common 17-14] Message 'Common 17-69' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc:18718]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'design_1_chaotic_puf_4lines_64stages_0_10' instantiated as 'design_1_i/chaotic_puf_4lines_64stages_5' [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.v:425]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'design_1_chaotic_puf_4lines_64stages_0_9' instantiated as 'design_1_i/chaotic_puf_4lines_64stages_4' [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.v:403]
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2721.797 ; gain = 34.742
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Mon Nov 27 23:22:41 2023] Launched synth_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_2 D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc
+add_files -fileset constrs_2 -norecurse D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_5/design_1_chaotic_puf_4lines_64stages_0_5.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_6/design_1_chaotic_puf_4lines_64stages_0_6.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_7/design_1_chaotic_puf_4lines_64stages_0_7.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_4lines_64stages_0_8/design_1_chaotic_puf_4lines_64stages_0_8.dcp' for cell 'design_1_i/chaotic_puf_4lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_1/design_1_chaotic_puf_8lines_64stages_0_1.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_2/design_1_chaotic_puf_8lines_64stages_0_2.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_3/design_1_chaotic_puf_8lines_64stages_0_3.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_chaotic_puf_8lines_64stages_0_4/design_1_chaotic_puf_8lines_64stages_0_4.dcp' for cell 'design_1_i/chaotic_puf_8lines_64stages_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 2762.504 ; gain = 40.707
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/constrs_2/imports/xdc/basic.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOIPUF_2x64_4x64_6x64_8x64_sym.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 2790.504 ; gain = 6.102
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Nov 27 23:33:22 2023] Launched synth_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/synth_1/runme.log
+[Mon Nov 27 23:33:22 2023] Launched impl_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 308 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper_board.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper_early.xdc]
+Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/.Xil/Vivado-1140-DESKTOP-LFC1P5E/dbg_hub_CV.0/out/xsdbm.xdc:10]
+Finished Parsing XDC File [D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/.Xil/Vivado-19140-DESKTOP-LFC1P5E/dcp95/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2923.020 ; gain = 3.309
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2923.020 ; gain = 3.309
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 58 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 52 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2957.941 ; gain = 154.242
+open_report: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3042.602 ; gain = 56.926
+file copy -force D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/design_1_wrapper.sysdef D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk -hwspec D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk -hwspec D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ipx::edit_ip_in_project -upgrade true -name chaotic_puf_8lines_64stages_v1_0_project -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.tmp/chaotic_puf_8lines_64stages_v1_0_project d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_8lines_64stages_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+current_project SOI_PUF_v1
+ipx::edit_ip_in_project -upgrade true -name chaotic_puf_4lines_64stages_v1_0_project -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.tmp/chaotic_puf_4lines_64stages_v1_0_project d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/chaotic_puf_4lines_64stages_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_4lines_64stages_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+[Tue Nov 28 11:16:28 2023] Launched synth_1...
+Run output will be captured here: d:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_4lines_64stages_v1_0_project/chaotic_puf_4lines_64stages_v1_0_project.runs/synth_1/runme.log
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 13 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'
+open_bd_design {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name chaotic_puf_4lines_64stages_v1_0_project -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.tmp/chaotic_puf_4lines_64stages_v1_0_project d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo/chaotic_puf_4lines_64stages_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/fpga_project/soi_puf_k2468/soi_puf_v1/soi_puf_v1.tmp/chaotic_puf_4lines_64stages_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/chaotic_puf_8lines_64stages_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/FPGA_project/SOI_PUF_k2468/ip_repo/puf_wrapper_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+current_project SOI_PUF_v1
+current_project chaotic_puf_4lines_64stages_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 14 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_repo'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_chaotic_puf_4lines_64stages_0_7 design_1_chaotic_puf_8lines_64stages_0_1 design_1_chaotic_puf_4lines_64stages_0_5 design_1_chaotic_puf_8lines_64stages_0_3 design_1_chaotic_puf_4lines_64stages_0_8 design_1_chaotic_puf_8lines_64stages_0_2 design_1_chaotic_puf_4lines_64stages_0_6 design_1_chaotic_puf_8lines_64stages_0_4}] -log ip_upgrade.log
+Upgrading 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_4lines_64stages_0_5 (chaotic_puf_4lines_64stages_v1.0 1.0) from revision 12 to revision 14
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_4lines_64stages_0_6 (chaotic_puf_4lines_64stages_v1.0 1.0) from revision 12 to revision 14
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_4lines_64stages_0_7 (chaotic_puf_4lines_64stages_v1.0 1.0) from revision 12 to revision 14
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_4lines_64stages_0_8 (chaotic_puf_4lines_64stages_v1.0 1.0) from revision 12 to revision 14
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_8lines_64stages_0_1 (chaotic_puf_8lines_64stages_v1.0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_8lines_64stages_0_2 (chaotic_puf_8lines_64stages_v1.0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_8lines_64stages_0_3 (chaotic_puf_8lines_64stages_v1.0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-3422] Upgraded design_1_chaotic_puf_8lines_64stages_0_4 (chaotic_puf_8lines_64stages_v1.0 1.0) from revision 2 to revision 3
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 3066.441 ; gain = 0.480
+export_ip_user_files -of_objects [get_ips {design_1_chaotic_puf_4lines_64stages_0_7 design_1_chaotic_puf_8lines_64stages_0_1 design_1_chaotic_puf_4lines_64stages_0_5 design_1_chaotic_puf_8lines_64stages_0_3 design_1_chaotic_puf_4lines_64stages_0_8 design_1_chaotic_puf_8lines_64stages_0_2 design_1_chaotic_puf_4lines_64stages_0_6 design_1_chaotic_puf_8lines_64stages_0_4}] -no_script -sync -force -quiet
+generate_target all [get_files  D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_4lines_64stages_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block chaotic_puf_8lines_64stages_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3105.090 ; gain = 38.508
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_4lines_64stages_0_5] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_4lines_64stages_0_6] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_4lines_64stages_0_7] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_4lines_64stages_0_8] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_2] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_3] }
+catch { config_ip_cache -export [get_ips -all design_1_chaotic_puf_8lines_64stages_0_4] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 1a7672cd6f614aab; cache size = 20.907 MB.
+export_ip_user_files -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 10 {design_1_chaotic_puf_4lines_64stages_0_5_synth_1 design_1_chaotic_puf_4lines_64stages_0_6_synth_1 design_1_chaotic_puf_4lines_64stages_0_7_synth_1 design_1_chaotic_puf_4lines_64stages_0_8_synth_1 design_1_chaotic_puf_8lines_64stages_0_1_synth_1 design_1_chaotic_puf_8lines_64stages_0_2_synth_1 design_1_chaotic_puf_8lines_64stages_0_3_synth_1 design_1_chaotic_puf_8lines_64stages_0_4_synth_1}
+[Tue Nov 28 11:20:49 2023] Launched design_1_chaotic_puf_4lines_64stages_0_5_synth_1, design_1_chaotic_puf_4lines_64stages_0_6_synth_1, design_1_chaotic_puf_4lines_64stages_0_7_synth_1, design_1_chaotic_puf_4lines_64stages_0_8_synth_1, design_1_chaotic_puf_8lines_64stages_0_1_synth_1, design_1_chaotic_puf_8lines_64stages_0_2_synth_1, design_1_chaotic_puf_8lines_64stages_0_3_synth_1, design_1_chaotic_puf_8lines_64stages_0_4_synth_1...
+Run output will be captured here:
+design_1_chaotic_puf_4lines_64stages_0_5_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_5_synth_1/runme.log
+design_1_chaotic_puf_4lines_64stages_0_6_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_6_synth_1/runme.log
+design_1_chaotic_puf_4lines_64stages_0_7_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_7_synth_1/runme.log
+design_1_chaotic_puf_4lines_64stages_0_8_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_4lines_64stages_0_8_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_1_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_1_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_2_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_2_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_3_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_3_synth_1/runme.log
+design_1_chaotic_puf_8lines_64stages_0_4_synth_1: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/design_1_chaotic_puf_8lines_64stages_0_4_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files -ipstatic_source_dir D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/modelsim} {questa=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/questa} {riviera=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+save_bd_design
+Wrote  : <D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Tue Nov 28 11:25:42 2023] Launched synth_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/synth_1/runme.log
+[Tue Nov 28 11:25:42 2023] Launched impl_1...
+Run output will be captured here: D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/runme.log
+open_bd_design {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.srcs/sources_1/bd/design_1/design_1.bd}
+file copy -force D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/design_1_wrapper.sysdef D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk -hwspec D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk -hwspec D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_project/SOI_PUF_k2468/SOI_PUF_v1/SOI_PUF_v1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 11:10:08 2023...
