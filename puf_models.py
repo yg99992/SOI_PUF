@@ -4,7 +4,7 @@ from copy import deepcopy,copy
 
 
 def gen_challenge(num = 10_000, chal_bits = 64, seed = None):
-    """ Generating input challenges
+    """ Generate input challenges
     num: the number of challenges
     chal_bits: the number of bits of each challenge
     """
@@ -14,34 +14,7 @@ def gen_challenge(num = 10_000, chal_bits = 64, seed = None):
     chal = np.random.randint(0, 2, [num, chal_bits])
     return chal
 
-class puf_basic:
-
-    @classmethod
-    def ml_dat_gen(cls, chal, resp_folder):
-        chal_numb = 1000_000
-        stage_n = [32, 64, 128]
-        path_k = [2,3,4,5,6]
-
-        if not os.path.isdir(resp_folder):
-            os.makedirs(resp_folder)
-
-        for n in stage_n:
-            for k in path_k:
-                puf = cls.gen_new_puf(n, k)
-
-                resp = cls.gen_resp(puf, chal[0:chal_numb, 0:n])
-
-                print('ML data gen: chal_num = %d, chal_bits= %d, xor_num = %d, uniformity = %.4f'\
-                    %(chal_numb, n, k, np.sum(resp)/chal_numb))
-
-                puf_name = 'puf_'+str(n)+'_'+str(k)
-                np.save(resp_folder + puf_name, puf)
-                resp_name = 'puf_'+str(n)+'_'+str(k)+'_res_1M'
-                np.save(resp_folder + resp_name, resp)
-
-
-
-class soi_puf(puf_basic):
+class soi_puf:
     """ Fully symmetric PUF
     """
     var = 1  # standard deviation of process
@@ -52,6 +25,9 @@ class soi_puf(puf_basic):
 
     @classmethod
     def gen_syn_path(cls, path_nodes, path_k):
+        '''
+        Generate the symmetrical connections of a delay stage
+        '''
         val = np.random.permutation(path_k)
         inv_flag = np.random.choice(2, path_k)
         tab = abs((path_nodes - 1) * inv_flag - val)
@@ -81,11 +57,11 @@ class soi_puf(puf_basic):
         else:
             for i in range(stage_n):
                 if permutation:
-                    tab0 = cls().gen_syn_path(path_nodes, path_k)  # generate random path, only one to one
-                    tab1 = cls().gen_syn_path(path_nodes, path_k)  # generate random path, only one to one
+                    tab0 = cls().gen_syn_path(path_nodes, path_k)  # generate random path
+                    tab1 = cls().gen_syn_path(path_nodes, path_k)  # generate random path
                     if disarrange:
                         while (tab0 == tab1).any():   # if any two elements is equal, regenerate path
-                            tab1 = cls().gen_syn_path(path_nodes, path_k)  # generate random path, only one to one
+                            tab1 = cls().gen_syn_path(path_nodes, path_k)  # generate random path
                 else:
                     pass
 
