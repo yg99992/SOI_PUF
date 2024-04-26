@@ -1,5 +1,5 @@
 # Python Model of SOI PUF and cSOI PUF
-This is the FPGA project, python model and matlab code of SOI PUF and cSOI PUF published in:
+This repository contains the FPGA project, python model and matlab code of SOI PUF and cSOI PUF published in:
 
 > C. Xu, L. Zhang, P. -I. Mak, R. P. Martins and M. -K. Law, "Fully Symmetrical Obfuscated Interconnection and Weak-PUF-Assisted Challenge Obfuscation Strong PUFs Against Machine-Learning Modeling Attacks," in IEEE Transactions on Information Forensics and Security, 2024
 
