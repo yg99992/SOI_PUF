@@ -87,8 +87,10 @@ class soi_puf:
         if seed != None:
             np.random.seed(int(seed))
 
+        # --------- Generate symmetrical obfuscated interconnections
         puf['tab'] = cls.gen_OIT(stage_n, path_k, xor_apuf=xor_apuf, permutation = permutation, disarrange = disarrange, seed = seed)
 
+        # --------- Generate process-dependent delay information 
         puf['par'] = np.random.normal(cls.mu, cls.var, [2, stage_n, path_nodes])
 
         puf['type'] = cls.type
@@ -129,7 +131,7 @@ class soi_puf:
         parityMat[:, stage_n-1, :, :] = np.identity(path_nodes)  # the final matrix is a identity vector
         for i in range(stage_n-2, -1, -1):
             parityMat[:, i, :, :] = np.matmul(tab_onehot[C[:, i+1], i+1, :, :], \
-                parityMat[:, i+1, :, :])  # multi matrix multiplication
+                parityMat[:, i+1, :, :])  # multiple matrixes multiplication
 
         return parityMat
 
@@ -159,19 +161,18 @@ class soi_puf:
             res = np.matmul(a,  b)  # sum of delay difference
 
             delay_sum[:, :, :] = delay_sum[:, :, :] + res  # sum of delay difference
-        delay_sum = delay_sum.reshape(num, path_nodes)
+
+        delay_sum  = delay_sum.reshape(num, path_nodes)
 
         ######## Environment Noise ##########
         delayNoise = np.random.normal(0, cls.var * noise * (stage_n**(0.5)), (num, path_nodes))
-        delay_sum = delay_sum + delayNoise  # add noise
+        delay_sum  = delay_sum + delayNoise  # add noise
 
-        a = delay_sum[:, 0:path_k]
-        tmp = delay_sum[:, path_k:]
-        b = np.zeros((num, path_k))
-        for i in range(path_k):
-            b[:,i] = tmp[:, path_k - 1 - i]
+        a          = delay_sum[:, 0:path_k]
+        tmp        = delay_sum[:, path_k:]
+        b          = np.fliplr(tmp)  # as the path is symmetric, so tmp should be flipped left and right
 
-        delayDiff = a - b # as the path is symmetric, so b should be inverted
+        delayDiff = a - b 
 
         # generate response
         md_buffer = np.zeros((num, path_k),dtype=np.int8)
@@ -202,7 +203,7 @@ class soi_puf:
         parityMat_n[:, 0, :, :] = np.identity(path_nodes)  # the final matrix is a identity vector
         for i in range(stage_n-2, -1, -1):
             parityMat_n[:, 0, :, :] = np.matmul(tab_onehot[C[:, i+1], i+1, :, :], \
-                parityMat_n[:, 0, :, :])  # multi matrix multiplication
+                parityMat_n[:, 0, :, :])  # multiple matrixes multiplication
 
             # transfer onehot matrix to decimal vector for saving memory
             parityVec[:, i, :]   =  np.matmul(np.arange(path_nodes), parityMat_n[:, 0, :, :])
@@ -237,7 +238,7 @@ class soi_puf:
             offs = np.arange(num) * path_nodes # calculate the offset
             b_off  = b + offs.reshape(num, 1)  # add offset to the linear vector
             b_off  = b_off.reshape(1, num * path_nodes) # reshape all the vector into a flat vector
-            delay_one = a[0, b_off[0, :]]  # adjust the sequence
+            delay_one = a[0, b_off[0, :]]  # adjust the sequence according to OIT information
             delay_one = delay_one.reshape(num, path_nodes)
 
             delay_sum = delay_sum + delay_one  # sum of delay difference
@@ -248,11 +249,9 @@ class soi_puf:
 
         a = delay_sum[:, 0:path_k]
         tmp = delay_sum[:, path_k:]
-        b = np.zeros((num, path_k))
-        for i in range(path_k):
-            b[:,i] = tmp[:, path_k - 1 - i]
+        b = np.fliplr(tmp)  # as the path is symmetric, so tmp should be flipped left and right
 
-        delayDiff = a - b # as the path is symmetric, so b should be inverted
+        delayDiff = a - b 
 
         # generate response
         md_buffer = np.zeros((num, path_k),dtype=np.int8)
@@ -319,43 +318,45 @@ class csoi_puf(soi_puf):
         if seed != None:
             np.random.seed(int(seed))
 
+        # --------- Generate symmetrical obfuscated interconnections
         puf['tab'] = cls.gen_OIT(stage_n, path_k, xor_apuf=xor_apuf, permutation = permutation, disarrange = disarrange, seed = seed)
+
+        # --------- Generate weak PUF responses
         puf['lut'] = np.random.randint(0,2,size=(int(stage_n/2),4), dtype=np.int8)
 
+        # --------- Generate process-dependent delay information 
         puf['par'] = np.random.normal(cls.mu, cls.var,  [2, stage_n, path_nodes])
 
         puf['type'] = cls.type
         return puf
 
     @classmethod
-    def cov_chal(cls, puf, C, noise = 0):
+    def chal_obf(cls, puf, C_front, C_mid, C_end):
         """ Convert PUF challenge based on the LUT value of weak PUF
         Args:
             puf ( dictionary ): PUF instance
             C ( array ): input challenge
-            mode: obfuscation mode
-            noise (int, optional): Noise level 0~1. Defaults to 0.
-        Returns:
-            array: converted challenge
         """
-        C_front = C[:, 0: int(C.shape[1]/6)]
-        C_slice = C[:,    int(C.shape[1]/6) : int(5*C.shape[1]/6)  ]
-        C_end   = C[:,                        int(5*C.shape[1]/6) :]
+        C_slice  = C_mid
 
-        num  = C_slice.shape[0]
-        bits = int(C_slice.shape[1]/2)
+        num_CRPs = C_slice.shape[0]
+        num_COBs = int(C_slice.shape[1]/2)
 
 
-        C_new   = np.zeros([num, bits],dtype=np.int8)
-        C_shift = np.zeros([num, bits],dtype=np.int8)
-        for i in range(bits):
-            inx = C_slice[:, i] + C_slice[:, i+bits] * 2
-            C_new[:, i] = puf['lut'][i, inx]
+        weak_puf_out = np.zeros([num_CRPs, num_COBs],dtype=np.int8)
+        #C_shift = np.zeros([num_CRPs, num_COBs],dtype=np.int8)
 
-        C_shift = np.concatenate((C_front, C_end), axis=1)
+        # -------- Weak PUF output
+        for i in range(num_COBs):
+            inx = C_slice[:, i] + C_slice[:, i+num_COBs] * 2
+            weak_puf_out[:, i] = puf['lut'][i, inx]
 
-        C_obf = np.bitwise_xor(C_shift, C_new)
+        C_trng = np.concatenate((C_front, C_end), axis=1)
 
+        # -------- XOR of weak PUF outputs and random challenge bits
+        C_obf = np.bitwise_xor(C_trng, weak_puf_out)
+
+        # -------- Generate obfuscated challenge for SOI PUF
         C_out = np.concatenate((C_front, C_obf, C_end), axis=1)
 
         return C_out
@@ -368,13 +369,22 @@ class csoi_puf(soi_puf):
                 2.puf['par'] is the delay information of OI_PUF
             C: challenges
         '''
-        tab_onehot   = cls.tab2onehot(puf['tab'])
         C = C.astype(np.int8)
-        C_new = deepcopy(C)
-        C_new = cls.cov_chal(puf, C) 
-        puf_linerHot = cls.get_linear_vector(tab_onehot, C_new)
 
-        resp_xor = cls.gen_resp_fast_vector(puf, C, puf_linerHot, noise)
+        # --------- Generate random challenges using TRNG
+        C_front = np.random.randint(0, 2, [C.shape[0], int(C.shape[1]/4)], dtype = np.int8)
+        C_end   = np.random.randint(0, 2, [C.shape[0], int(C.shape[1]/4)], dtype = np.int8)
+
+        C_mid   = deepcopy(C)
+
+        # --------- Challenge obfuscation using TRNG and weak PUF cells
+        C_obf   = cls.chal_obf(puf, C_front, C_mid, C_end) 
+
+        # --------- Interconnection obfuscation process
+        tab_onehot   = cls.tab2onehot(puf['tab']) # convert the obfuscation interconnections of each stage into onehot format
+        puf_linerHot = cls.get_linear_vector(tab_onehot, C_obf) # remove the nonlinear operation introduced by OIT
+
+        resp_xor = cls.gen_resp_fast_vector(puf, C_obf, puf_linerHot, noise)
 
         return resp_xor
 
@@ -387,7 +397,7 @@ if __name__ == "__main__":
     # generate 10k 64-bits challenges
     chal1 = gen_challenge(10_000, 64, seed = 1)   
 
-    # generate 1M CRPs
+    # generate response
     resp1 = soi_puf.gen_resp(soipuf_inst, chal1)
 
     print('Uniformity is ', np.sum(resp1)/resp1.shape[0])
@@ -395,11 +405,8 @@ if __name__ == "__main__":
     # generate a (64, 4)-cSOI PUF
     csoipuf_inst = csoi_puf.gen_new_puf(64, 4)
 
-    # generate 10k 64-bits challenges
-    chal2 = gen_challenge(10_000, 64+32, seed = 1)  # 64 is the input challenge bits, 32 is the random bits generated by TRNG
-
-    # generate 1M CRPs
-    resp2 = csoi_puf.gen_resp(csoipuf_inst, chal2)
+    # generate response
+    resp2 = csoi_puf.gen_resp(csoipuf_inst, chal1)
 
     print('Uniformity is ', np.sum(resp2)/resp2.shape[0])
     
