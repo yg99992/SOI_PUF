@@ -6,7 +6,7 @@ In order to facilitate your assessment and replication, we provides the source c
 
 This repository contains the FPGA project, python model and matlab code of SOI PUF and cSOI PUF. 
 
-### If you used the source code of this project in your research, please cite our work in your publication.
+### If you used the source code of this project in your research, please cite the work below in your publication.
 
 
 > C. Xu, L. Zhang, P. -I. Mak, R. P. Martins and M. -K. Law, "Fully Symmetrical Obfuscated Interconnection and Weak-PUF-Assisted Challenge Obfuscation Strong PUFs Against Machine-Learning Modeling Attacks," in IEEE Transactions on Information Forensics and Security, 2024
